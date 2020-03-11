@@ -64,6 +64,16 @@
    box-shadow: 0px 2px 4px rgba(0,0,0, 0.1);
    font-size: 2vw;
    margin-bottom: 50px;
+   text-align: center;
+}
+.projects-button > button {
+   background-color: #4A4848;
+   color: white;
+   border: 0;
+   width: 100%;
+}
+.projects-button-container :hover{
+   cursor: pointer;
 }
 
 @media screen and (max-width: 1300px) {

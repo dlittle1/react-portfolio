@@ -3,19 +3,15 @@ import projectArray from "../projectArray"
 import Project from "./Project"
 import "../style_sheets/Home.css"
 import styles from "../style_sheets/design.css.js"
+import { useHistory} from 'react-router-dom'
 
 export default function Home(){
    const [projectsClicked, setProjectsClicked] = useState(false)
+   const history = useHistory()
 
    function handleClick(event){
-      event.preventDefault()
-      if (!projectsClicked){
-         setProjectsClicked(() => true)
-      } else {
-         setProjectsClicked(() => false)
-      }
+      history.push('/projects/1')
    }
-
    const {red, purpRed, whiteSmoke} = styles
    const projects = projectArray.map(project => (<Project title={project.title} subtitle={project.subtitle} author={project.author}/>))
    return (
@@ -38,10 +34,15 @@ export default function Home(){
                   </span>
                </div>
                <div className="projects-button-container">
-                  <button onClick={handleClick} className="projects-button"><h2>View Projects</h2></button>
+                  <a className="projects-button">
+                     <button onClick={handleClick}>
+                        <h2>View Projects</h2>
+                     </button>
+                  </a>
                </div>
             </main>
          </div>
+
          {projectsClicked ? projects : ""}
       </div>
    )
