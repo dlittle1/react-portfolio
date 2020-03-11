@@ -5,22 +5,51 @@ import Project from "./Project"
 import {BrowserRouter as Router, Link, useHistory} from 'react-router-dom'
 export default function Modal(props){
    const {whiteSmoke, darkGrey, purpRed} = styles
+   const {navColor, linkColor, projectLocation } = props
    const history = useHistory()
    function handleChange(str){
       props.handleModal()
       history.push(str)
    }
    return (
-      <div>
-         <Router>
-               <ul className="modal" style={{backgroundColor: darkGrey.color}}>
-                  <Link onClick={() => handleChange("/")} to="/"><h3><span style={purpRed}>{'{ '}</span>Home<span style={purpRed}>{' }'}</span></h3></Link>
-                  <Link onClick={() => handleChange("/projects/1")} to="/projects/1"><h3><span style={purpRed}>{'{ '}</span>Project 1<span style={purpRed}>{' }'}</span></h3></Link>
-                  <Link onClick={() => handleChange("/projects/2")} to="/projects/2"><h3><span style={purpRed}>{'{ '}</span>Project 2<span style={purpRed}>{' }'}</span></h3></Link>
-                  <Link onClick={() => handleChange("/projects/3")} to="/projects/3"><h3><span style={purpRed}>{'{ '}</span>Project 3<span style={purpRed}>{' }'}</span></h3></Link>
-                  <Link onClick={() => handleChange("/projects/4")} to="/projects/4"><h3><span style={purpRed}>{'{ '}</span>Project 4<span style={purpRed}>{' }'}</span></h3></Link>
-               </ul>
-         </Router>
-      </div>
+      <Router>
+            <ul className="modal" style={projectLocation ? {backgroundColor: navColor.color, marginTop: "30px"} : {backgroundColor: navColor.color, marginTop: "-2px"}}>
+               <Link to="/" onClick={() => handleChange("/")}>
+                  <h3 style={{marginLeft: "-20px"}}>
+                     <span style={purpRed}>{'{ '}</span>
+                        <span style={linkColor} className="nav-item">Home</span>
+                     <span style={purpRed}>{' }'}</span>
+                  </h3>
+               </Link>
+               <Link to="/projects/1" onClick={() => handleChange("/projects/1")}>
+                  <h3>
+                     <span style={purpRed}>{'{ '}</span>
+                        <span style={linkColor}>Project 1</span>
+                     <span style={purpRed}>{' }'}</span>
+                  </h3>
+               </Link>
+               <Link to="/projects/2" onClick={() => handleChange("/projects/2")}>
+                  <h3>
+                     <span style={purpRed}>{'{ '}</span>
+                        <span style={linkColor}>Project 2</span>
+                     <span style={purpRed}>{' }'}</span>
+                  </h3>
+               </Link>
+               <Link to="/projects/3" onClick={() => handleChange("/projects/3")}>
+                  <h3>
+                     <span style={purpRed}>{'{ '}</span>
+                        <span style={linkColor}>Project 3</span>
+                     <span style={purpRed}>{' }'}</span>
+                  </h3>
+               </Link>
+               <Link to="/projects/4" onClick={() => handleChange("/projects/4")}>
+                  <h3>
+                     <span style={purpRed}>{'{ '}</span>
+                        <span style={linkColor}>Project 4</span>
+                     <span style={purpRed}>{' }'}</span>
+                  </h3>
+               </Link>
+            </ul>
+      </Router>
    )
 }

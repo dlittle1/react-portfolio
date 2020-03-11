@@ -11,17 +11,20 @@ export default function Navbar(){
    const [modalOn, setModalOn] = useState(false)
    const location = useLocation()
    const {darkGrey, purpRed, whiteSmoke} = styles
+   const locationArr = location.pathname.split("/")
+   let projectLocation = locationArr.includes("projects") ? true : false
    let navColor = darkGrey
    let linkColor = whiteSmoke
    let iconChange = false
    function handleModal(){
       setModalOn(() => !modalOn)
    }
+
    changeNavColor();
    function changeNavColor(){
-      const locationArr = location.pathname.split("/")
+
       console.log(locationArr);
-      if (locationArr.includes("projects")){
+      if (projectLocation){
          navColor = whiteSmoke
          linkColor = darkGrey
          iconChange = true
@@ -30,7 +33,7 @@ export default function Navbar(){
    console.log(location);
    return (
       <>
-         {modalOn ? <Modal handleModal={handleModal}/> : ""}
+         {modalOn ? <Modal handleModal={handleModal} navColor={navColor} linkColor={linkColor} projectLocation={projectLocation}/> : ""}
             <div style={{backgroundColor: navColor.color}} className="navbar">
                <ul className="nav-top">
                   <Link to="/">
