@@ -1,0 +1,33 @@
+.navbar {
+   margin-bottom: 30px;
+   height: 40px;
+   display: flex;
+   justify-content: flex-end;
+   padding-bottom: 10px;
+}
+
+.nav-top {
+   display: inline-block;
+   list-style: none;
+
+   font-family: -apple-system-headline, BlinkMacSystemFont, sans-serif;
+}
+.navbar > ul > a{
+   display: inline-block;
+   list-style: none;
+   padding: 0 20px 0 20px;
+   font-family: -apple-system-headline, BlinkMacSystemFont, sans-serif;
+   font-size: 15px;
+   margin: -25px 0 0 0;
+   color: #F8F8F8;
+}
+
+span{
+   font-size: 25px;
+}
+
+@media screen and (max-width: 720px) {
+   .nav-top {
+      display: none;
+   }
+}
