@@ -16,21 +16,23 @@ export default function Navbar(){
    let navColor = darkGrey
    let linkColor = whiteSmoke
    let iconChange = false
+
    function handleModal(){
+      console.log("clicked", modalOn);
       setModalOn(() => !modalOn)
+
    }
 
    changeNavColor();
    function changeNavColor(){
-
-      console.log(locationArr);
       if (projectLocation){
          navColor = whiteSmoke
          linkColor = darkGrey
          iconChange = true
+
       }
    }
-   console.log(location);
+
    return (
       <>
          {modalOn ? <Modal handleModal={handleModal} navColor={navColor} linkColor={linkColor} projectLocation={projectLocation}/> : ""}
@@ -74,15 +76,6 @@ export default function Navbar(){
                   <button onClick={handleModal} style={{backgroundColor: navColor.color}}>{iconChange ? <img src={require("../assets/nav-icon-dark.png")} /> : <img src={require("../assets/nav-icon.png")} />}</button>
                </ul>
             </div>
-            <Switch>
-               <Route exact path='/'>
-                  <Home />
-               </Route>
-               <Route path='/react-portfolio'>
-                  <Home />
-               </Route>
-               <Route path='/projects/:id' children={<Project />} />
-            </Switch>
          </>
    )
 }

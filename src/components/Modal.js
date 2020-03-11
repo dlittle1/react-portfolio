@@ -13,7 +13,7 @@ export default function Modal(props){
    }
    return (
       <Router>
-            <ul className="modal" style={projectLocation ? {backgroundColor: navColor.color, marginTop: "30px"} : {backgroundColor: navColor.color, marginTop: "-2px"}}>
+            <ul className="modal" style={projectLocation ? {backgroundColor: navColor.color, top: "80px"} : {backgroundColor: navColor.color, marginTop: "-2px"}}>
                <Link to="/" onClick={() => handleChange("/")}>
                   <h3 style={{marginLeft: "-20px"}}>
                      <span style={purpRed}>{'{ '}</span>

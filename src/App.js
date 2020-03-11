@@ -8,11 +8,29 @@ import {Switch, Route} from 'react-router-dom'
 
 function App() {
    return (
-      <div className="App">
-         <Navbar />
+      <>
+         <Switch>
+            <Route exact path='/'>
+               <Navbar />
+               <Home />
+               <Footer />
+            </Route>
 
-         <Footer />
-      </div>
+            <Route exact path='#'>
+               <Navbar />
+               <Home />
+               <Footer />
+            </Route>
+
+            <Route path='/react-portfolio'>
+               <Navbar />
+               <Home />
+               <Footer />
+            </Route>
+
+            <Route path='/projects/:id' children={<><Navbar /><Project /><Footer /></>} />
+         </Switch>
+      </>
    );
 }
 
