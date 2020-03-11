@@ -1,35 +1,85 @@
-import React from 'react'
+import React, {useState} from 'react'
 import '../style_sheets/Navbar.css'
 import styles from "../style_sheets/design.css.js"
 import Home from "./Home"
 import Project from "./Project"
-import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom'
+import Modal from "./Modal"
+import {Switch, Route, Link, useLocation} from 'react-router-dom'
 import {CSSTransition} from 'react-transition-group'
 
 export default function Navbar(){
-
-   const {darkGrey, purpRed} = styles
+   const [modalOn, setModalOn] = useState(false)
+   const location = useLocation()
+   const {darkGrey, purpRed, whiteSmoke} = styles
+   let navColor = darkGrey
+   let linkColor = whiteSmoke
+   let iconChange = false
+   function handleModal(){
+      setModalOn(() => !modalOn)
+   }
+   changeNavColor();
+   function changeNavColor(){
+      const locationArr = location.pathname.split("/")
+      console.log(locationArr);
+      if (locationArr.includes("projects")){
+         navColor = whiteSmoke
+         linkColor = darkGrey
+         iconChange = true
+      }
+   }
+   console.log(location);
    return (
-      <Router>
-         <div style={{backgroundColor: darkGrey.color}} className="navbar">
-            <ul className="nav-top">
-               <Link to="/"><h3 style={{marginLeft: "-20px"}}><span style={purpRed}>{'{ '}</span>Home<span style={purpRed}>{' }'}</span></h3></Link>
-               <Link to="/projects/1"><h3><span style={purpRed}>{'{ '}</span>Project 1<span style={purpRed}>{' }'}</span></h3></Link>
-               <Link to="/projects/2"><h3><span style={purpRed}>{'{ '}</span>Project 2<span style={purpRed}>{' }'}</span></h3></Link>
-               <Link to="/projects/3"><h3><span style={purpRed}>{'{ '}</span>Project 3<span style={purpRed}>{' }'}</span></h3></Link>
-               <Link to="/projects/4"><h3><span style={purpRed}>{'{ '}</span>Project 4<span style={purpRed}>{' }'}</span></h3></Link>
-            </ul>
-         </div>
-         <Switch>
-            <Route exact path='/'>
-               <Home />
-            </Route>
-            <Route path='/react-portfolio'>
-               <Home />
-            </Route>
-            <Route path='/projects/:id' children={<Project />} />
-         </Switch>
-      </Router>
-
+      <>
+         {modalOn ? <Modal handleModal={handleModal}/> : ""}
+            <div style={{backgroundColor: navColor.color}} className="navbar">
+               <ul className="nav-top">
+                  <Link to="/">
+                     <h3 style={{marginLeft: "-20px"}}>
+                        <span style={purpRed}>{'{ '}</span>
+                           <span style={linkColor} className="nav-item">Home</span>
+                        <span style={purpRed}>{' }'}</span>
+                     </h3>
+                  </Link>
+                  <Link to="/projects/1">
+                     <h3>
+                        <span style={purpRed}>{'{ '}</span>
+                           <span style={linkColor}>Project 1</span>
+                        <span style={purpRed}>{' }'}</span>
+                     </h3>
+                  </Link>
+                  <Link to="/projects/2">
+                     <h3>
+                        <span style={purpRed}>{'{ '}</span>
+                           <span style={linkColor}>Project 2</span>
+                        <span style={purpRed}>{' }'}</span>
+                     </h3>
+                  </Link>
+                  <Link to="/projects/3">
+                     <h3>
+                        <span style={purpRed}>{'{ '}</span>
+                           <span style={linkColor}>Project 3</span>
+                        <span style={purpRed}>{' }'}</span>
+                     </h3>
+                  </Link>
+                  <Link to="/projects/4">
+                     <h3>
+                        <span style={purpRed}>{'{ '}</span>
+                           <span style={linkColor}>Project 4</span>
+                        <span style={purpRed}>{' }'}</span>
+                     </h3>
+                  </Link>
+                  <button onClick={handleModal} style={{backgroundColor: navColor.color}}>{iconChange ? <img src={require("../assets/nav-icon-dark.png")} /> : <img src={require("../assets/nav-icon.png")} />}</button>
+               </ul>
+            </div>
+            <Switch>
+               <Route exact path='/'>
+                  <Home />
+               </Route>
+               <Route path='/react-portfolio'>
+                  <Home />
+               </Route>
+               <Route path='/projects/:id' children={<Project />} />
+            </Switch>
+         </>
    )
 }

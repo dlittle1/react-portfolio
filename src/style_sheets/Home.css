@@ -1,22 +1,16 @@
-.home {
-
-}
-.container{
-}
 
 .header{
    display: flex;
    justify-content:flex-start;
    max-height: 150px;
-   margin: 2%;
+   margin-left: 2%;
 }
 
 .links {
-   max-width: 7%;
+   max-width: 5%;
 }
 .links > img{
    max-width: 100%;
-
 }
 .linkedin {
    margin-left: 20%
@@ -28,19 +22,16 @@
    box-shadow: 0px 2px 4px rgba(0,0,0, 0.2);
    margin: 2%;
 }
-
 .hero-text {
    width: 100%;
    z-index: 1;
    font-size: 3.5vw;
 }
-
 .hero-text > h1 {
    display: inline-block;
    margin-bottom: 0px;
    left: 0;
 }
-
 .hero-text > h2 {
    display: inline-block;
    font-size: 3vw;
@@ -48,7 +39,6 @@
    top: 0;
    margin-bottom: 10%;
 }
-
 .projects-button-container {
    display: flex;
    margin-left: 2%;
@@ -62,7 +52,6 @@
    width: 30%;
    border: 0;
    box-shadow: 0px 2px 4px rgba(0,0,0, 0.1);
-   font-size: 2vw;
    margin-bottom: 50px;
    text-align: center;
 }
@@ -76,47 +65,41 @@
    cursor: pointer;
 }
 
-@media screen and (max-width: 1300px) {
-   .header {
-      margin-top: 15%;
+@media screen and (max-width: 1100px) {
+   .home {
+      margin-top: 10%;
    }
    .main {
-      margin-top: 5%;
       margin-bottom: 2%;
    }
-   .home {
-      position: absolute;
-      top: 0;
-   }
 }
 
-
-@media screen and (max-width: 700px) {
-   .header {
-
+@media screen and (max-width: 600px) {
+   .home {
+      margin-top: 10%;
    }
    .main {
-      margin-top: 5%;
+
       margin-bottom: 5%;
    }
-   .home {
-      position: absolute;
-      top: 10%;
+   .projects-button > button{
+      font-size: 2vw;
+   }
+   .links {
+      max-width: 10%;
    }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1100px) {
    .home {
       margin: 0 70px 0px 70px;
    }
    .header {
-      max-height: 100px;
+      max-height: 30px;
    }
-
    .links {
-      max-width: 5%;
+      max-width: 4%;
    }
-
    .projects-button {
       font-size: 1vw;
    }
