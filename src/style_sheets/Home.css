@@ -1,4 +1,6 @@
-
+.home {
+   padding-top: 80px;
+}
 .header{
    display: flex;
    justify-content:flex-start;

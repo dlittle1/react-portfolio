@@ -1,4 +1,6 @@
-
+.project {
+   padding-top: 80px;
+}
 .body-text {
    display: grid;
    grid-template-columns: auto 3fr;
