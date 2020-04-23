@@ -23,14 +23,14 @@ export default function Modal(props){
             <Link to="/projects/1" onClick={() => handleChange("/projects/1")}>
                <h3>
                   <span style={purpRed}>{'{ '}</span>
-                     <span style={linkColor}>Project 1</span>
+                     <span style={linkColor}>Trivia App</span>
                   <span style={purpRed}>{' }'}</span>
                </h3>
             </Link>
             <Link to="/projects/2" onClick={() => handleChange("/projects/2")}>
                <h3>
                   <span style={purpRed}>{'{ '}</span>
-                     <span style={linkColor}>Project 2</span>
+                     <span style={linkColor}>My Portfolio Project</span>
                   <span style={purpRed}>{' }'}</span>
                </h3>
             </Link>

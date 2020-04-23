@@ -2,7 +2,8 @@ export default [
     {
       published:true,
       title: "Trivia App - React ",
-      website: "https://dlittle1.github.io/Trivia_Game_React/",
+      website: "https://dlittle1.github.io/Trivia_Game_React",
+      github: "https://github.com/dlittle1/Trivia_Game_React",
       featuresArr:
       [
          {
@@ -27,23 +28,41 @@ export default [
       ]
     },
     {
-      published: false,
-      title: "Coming Soon...",
-      website: "https://dlittle1.github.io/Trivia_Game_React/",
-      p1Title: "Built Using the opentdb.com Trivia Api - Stored Locally",
-      p1Text: `My Trivia App was built as a means to express my ability to use RESTful API's in my React Applications. The application utilizes Axios to access the database, and pull in the required information. The Score, Health, and Questions are all stored locally allowing the user to leave or refresh without interuption.`,
-      p2Title: "The User Gets to Choose",
-      p2Text: "When first starting the application the user is as to choose which Category and Difficulty they would like to play with. The category of questions, and their difficulty will then be pulled from the API allowing the user to begin the game.",
-      p3Title: "The Object of The Game",
-      p3Text: "The game length is determined by how long a player can stay alive. They have three lives, every time they miss a question they lose a life, if they die early the game ends, and they have to restart. If they go all 10 questions without losing they win the game, and are then able to play again if they choose to do so.",
+      published:true,
+      title: "My Portfolio - React ",
+      website: "https://dlittle1.github.io/react-portfolio",
+      github: "https://github.com/dlittle1/react-portfolio",
+      featuresArr:
+      [
+         {
+            title: "Built with expandability in mind",
+            text: `Was built without a backend but with an array of objects - projects.
+                   Whenever I need to edit a project, or add a new project, all I need to do is add it to the array.
+                   The Projects page will then take the info from the array and share it with the user of the site for it's given project id.
+                   As pictured in the screenshot within this projects carousel.`
+         },
+         {
+            title: "Built with UI/UX at it's core",
+            text: `From the very beginning of it's creation, I wanted this site to stand out.
+                   After all, it is my portfolio. It's what needs to stand out! So before even beginning I had to create the idea, I used Adobe XD for this.
+                   Learning Adobe XD has been an integral part of not only learning to make websites, but to make easy to use, good looking sites as well.
+                   it helped me to sketch out what would look great, then implementing that into code was easy peasy.`
+         },
+         {
+            title: "A possible business idea.",
+            text: `I know there are a lot of template sites out there for wordpress, but with a site such as this, all you would really need to know is how to edit an object without breaking the code.
+                   This site could easily be turned into a template site that I could then sell to others looking for portfolio templates.`
+         }
+      ],
       imgArr:
       [
-          {imgSrc: require("./assets/triviaCode.png"), imgSubtitle: "use of axios for getting and setting categories, and difficulty"},
-          {imgSrc: require("./assets/triviaLocalStorage.png"), imgSubtitle: "use of local storage allowing the user a more functional experience"},
-          {imgSrc: require("./assets/triviaRoyaleHome.png"), imgSubtitle: "Home Page"},
-          {imgSrc: require("./assets/triviaGame.png"), imgSubtitle: "Gameplay"}
-      ]
+         {imgSrc: require("./assets/portfolio/adobeXD.png"), imgSubtitle: "use of Adobe Xd in the creation of my portfolio, some things have changed, but that's all in the process :)"},
+         {imgSrc: require("./assets/portfolio/projectsArray.png"), imgSubtitle: "Using an array of objects to store, and easily access projects"},
+         {imgSrc: require("./assets/portfolio/projectsPage.png"), imgSubtitle: "How I access the array of objects to display my project"},
+         {imgSrc: require("./assets/portfolio/projectsPage2.png"), imgSubtitle: "Using the information given, I can then display the info in a clear, and concise way"}
 
+
+      ]
     },
     {
       published: false,

@@ -39,7 +39,7 @@ export default function Navbar(){
                   </Link>
                   <Link to="/projects/2">
                      <h3>
-                        <span style={linkColor}>Project 2</span>
+                        <span style={linkColor}>My Portfolio Project</span>
                      </h3>
                   </Link>
                   <Link to="/projects/3">
