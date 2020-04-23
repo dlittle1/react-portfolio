@@ -20,17 +20,6 @@ export default function Navbar(){
    function handleModal(){
       console.log("clicked", modalOn);
       setModalOn(() => !modalOn)
-
-   }
-
-   changeNavColor();
-   function changeNavColor(){
-      if (projectLocation){
-         navColor = whiteSmoke
-         linkColor = darkGrey
-         iconChange = true
-
-      }
    }
 
    return (
@@ -40,37 +29,27 @@ export default function Navbar(){
                <ul className="nav-top">
                   <Link to="/">
                      <h3 style={{marginLeft: "-20px"}}>
-                        <span style={purpRed}>{'{ '}</span>
-                           <span style={linkColor} className="nav-item">Home</span>
-                        <span style={purpRed}>{' }'}</span>
+                        <span style={linkColor} className="nav-item">Home</span>
                      </h3>
                   </Link>
                   <Link to="/projects/1">
                      <h3>
-                        <span style={purpRed}>{'{ '}</span>
-                           <span style={linkColor}>Project 1</span>
-                        <span style={purpRed}>{' }'}</span>
+                        <span style={linkColor}>Trivia App</span>
                      </h3>
                   </Link>
                   <Link to="/projects/2">
                      <h3>
-                        <span style={purpRed}>{'{ '}</span>
-                           <span style={linkColor}>Project 2</span>
-                        <span style={purpRed}>{' }'}</span>
+                        <span style={linkColor}>Project 2</span>
                      </h3>
                   </Link>
                   <Link to="/projects/3">
                      <h3>
-                        <span style={purpRed}>{'{ '}</span>
-                           <span style={linkColor}>Project 3</span>
-                        <span style={purpRed}>{' }'}</span>
+                        <span style={linkColor}>Project 3</span>
                      </h3>
                   </Link>
                   <Link to="/projects/4">
                      <h3>
-                        <span style={purpRed}>{'{ '}</span>
-                           <span style={linkColor}>Project 4</span>
-                        <span style={purpRed}>{' }'}</span>
+                        <span style={linkColor}>Project 4</span>
                      </h3>
                   </Link>
                   <button onClick={handleModal} style={{backgroundColor: navColor.color}}>{iconChange ? <img src={require("../assets/nav-icon-dark.png")} /> : <img src={require("../assets/nav-icon.png")} />}</button>
