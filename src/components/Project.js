@@ -53,8 +53,8 @@ export default function Project(props){
                <h1 className="title project-title">{title}
 
                   <hr />
-                  <a target="_blank" href={website}>site: {website}</a><br/>
-                  <a target="_blank" href={github}>github: {github}</a>
+                  {website === undefined ? "" : <><a target="_blank" href={website}>site: {website}</a><br/></>}
+                  {github === undefined ? "" : <><a target="_blank" href={github}>github: {github}</a><br/></>}
                </h1>
 
                {features}

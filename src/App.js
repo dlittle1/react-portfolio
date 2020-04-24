@@ -16,12 +16,6 @@ function App() {
                <Footer />
             </Route>
 
-            <Route exact path='#'>
-               <Navbar />
-               <Home />
-               <Footer />
-            </Route>
-
             <Route path='/react-portfolio'>
                <Navbar />
                <Home />
