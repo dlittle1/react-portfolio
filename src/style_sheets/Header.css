@@ -1,0 +1,17 @@
+.header{
+   display: flex;
+   justify-content:flex-start;
+   max-height: 150px;
+   margin-left: 2%;
+   margin-bottom: 3%;
+}
+
+.links {
+   max-width: 5%;
+}
+.links > img{
+   max-width: 100%;
+}
+.linkedin {
+   margin-left: 20%
+}

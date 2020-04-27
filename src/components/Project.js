@@ -11,7 +11,10 @@ export default function Project(props){
    let { id } = useParams()
    const history = useHistory();
    const {title, website, github, featuresArr, imgArr, published} = projectArray[id - 1]
-
+   let maxWidthImage = "800px";
+   if (id === "4"){
+      maxWidthImage = "300px";
+   }
    if (!published)
    {
       return (
@@ -32,8 +35,9 @@ export default function Project(props){
       const images = imgArr.map((image) => {
          return (
             <div>
-               <img src={image.imgSrc} />
-               <p className="legend">{image.imgSubtitle}</p>
+               <img style={{maxWidth: maxWidthImage}} src={image.imgSrc} />
+               {image.subtitle === undefined ? "" : <p className="legend">{image.imgSubtitle}</p>}
+
             </div>
          )
       } )
@@ -43,10 +47,9 @@ export default function Project(props){
       }
       return (
          <div className="project">
-            <div className="img-carousel">
+            <div className="img-carousel" style={{maxWidth: maxWidthImage}}>
                <Carousel dynamicHeight={true} autoPlay={true} infiniteLoop={true} interval={4000}>
                   {images}
-
                </Carousel>
             </div>
             <div className="body-text">

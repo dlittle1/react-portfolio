@@ -1,0 +1,26 @@
+.projectGrid {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: row;
+   flex-wrap: wrap;
+   flex-flow: row wrap;
+   align-content: flex-end;
+   margin-top: 50px;
+}
+
+.projectImage{
+   margin: 10px;
+   max-width: 600px;
+   position: relative;
+}
+
+.projectTitle {
+   position: absolute;
+   top: 40%;
+   background-color: #4A4848;
+   width: 100%;
+   margin: 0;
+   height: 60px;
+   color: white;
+}

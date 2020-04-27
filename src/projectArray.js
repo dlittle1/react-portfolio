@@ -25,7 +25,8 @@ export default [
          {imgSrc: require("./assets/triviaLocalStorage.png"), imgSubtitle: "use of local storage allowing the user a more functional experience"},
          {imgSrc: require("./assets/triviaRoyaleHome.png"), imgSubtitle: "Home Page"},
          {imgSrc: require("./assets/triviaGame.png"), imgSubtitle: "Gameplay"}
-      ]
+      ],
+      featuredImage: require("./assets/triviaRoyaleHome.png")
     },
     {
       published:true,
@@ -62,7 +63,8 @@ export default [
          {imgSrc: require("./assets/portfolio/projectsPage2.png"), imgSubtitle: "Using the information given, I can then display the info in a clear, and concise way"}
 
 
-      ]
+      ],
+      featuredImage: require("./assets/portfolio/adobeXD.png")
     },
     {
       published: false,
@@ -82,24 +84,17 @@ export default [
       featuresArr:
       [
          {
-           title: "Built Using the opentdb.com Trivia Api - Stored Locally",
-           text: "My Trivia App was built as a means to express my ability to use RESTful API's in my React Applications. The application utilizes Axios to access the database, and pull in the required information. The Score, Health, and Questions are all stored locally allowing the user to leave or refresh without interuption."
-         },
-         {
-           title: "The Object of The Game",
-           text: "The game length is determined by how long a player can stay alive. They have three lives, every time they miss a question they lose a life, if they die early the game ends, and they have to restart. If they go all 10 questions without losing they win the game, and are then able to play again if they choose to do so."
-         },
-         {
-           title: "The User Gets to Choose",
-           text: "When first starting the application the user is as to choose which Category and Difficulty they would like to play with. The category of questions, and their difficulty will then be pulled from the API allowing the user to begin the game."
+           title: "🍟 + 😴 + 💻 Pretty much sums it up",
+           text: "In all honesty though, I really do love to code, not only is it something that I can do professionaly but it's something that I'm truly passionate about. Ever since I was a kid I've enjoyed puzzles. I started out with jigsaw but then moved into word puzzles, for example, you have to figure out who is wearing what, and what kind of pet they owned. If you know what i'm talking about then I applaud you, I loved those as a kid. I think one of the reasons I love programming so much is because I love to come up with solutions to problems, or answers to puzzles. It's exciting for me, I can literally do it all day."
          }
       ],
       imgArr:
       [
-         {imgSrc: require("./assets/triviaCode.png"), imgSubtitle: "use of axios for getting and setting categories, and difficulty"},
-         {imgSrc: require("./assets/triviaLocalStorage.png"), imgSubtitle: "use of local storage allowing the user a more functional experience"},
-         {imgSrc: require("./assets/triviaRoyaleHome.png"), imgSubtitle: "Home Page"},
-         {imgSrc: require("./assets/triviaGame.png"), imgSubtitle: "Gameplay"}
-      ]
+         {imgSrc: require("./assets/moto.jpg")},
+         {imgSrc: require("./assets/profileImage2.jpeg")},
+         {imgSrc: require("./assets/stars.jpg")},
+         {imgSrc: require("./assets/lights.jpg")}
+      ],
+      featuredImage: require("./assets/profileImage.jpg")
   }
 ]

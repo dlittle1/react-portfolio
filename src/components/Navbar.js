@@ -4,7 +4,7 @@ import styles from "../style_sheets/design.css.js"
 import Home from "./Home"
 import Project from "./Project"
 import Modal from "./Modal"
-import {Switch, Route, Link, useLocation} from 'react-router-dom'
+import {Link, useLocation} from 'react-router-dom'
 import {CSSTransition} from 'react-transition-group'
 
 export default function Navbar(){
@@ -49,7 +49,7 @@ export default function Navbar(){
                   </Link>
                   <Link to="/projects/4">
                      <h3>
-                        <span style={linkColor}>Project 4</span>
+                        <span style={linkColor}>About Me</span>
                      </h3>
                   </Link>
                   <button onClick={handleModal} style={{backgroundColor: navColor.color}}>{iconChange ? <img src={require("../assets/nav-icon-dark.png")} /> : <img src={require("../assets/nav-icon.png")} />}</button>
