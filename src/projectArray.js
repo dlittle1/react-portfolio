@@ -85,8 +85,20 @@ export default [
       [
          {
            title: "🍟 + 😴 + 💻 Pretty much sums it up",
-           text: "In all honesty though, I really do love to code, not only is it something that I can do professionaly but it's something that I'm truly passionate about. Ever since I was a kid I've enjoyed puzzles. I started out with jigsaw but then moved into word puzzles, for example, you have to figure out who is wearing what, and what kind of pet they owned. If you know what i'm talking about then I applaud you, I loved those as a kid. I think one of the reasons I love programming so much is because I love to come up with solutions to problems, or answers to puzzles. It's exciting for me, I can literally do it all day."
-         }
+           text: "In all honesty though, I really do love to code, not only is it something that I can do professionaly but it's something that I'm truly passionate about. "
+        },
+        {
+           title: "Puzzles",
+           text: "Ever since I was a kid I've enjoyed puzzles. I started out with jigsaw but then moved into word puzzles, for example, you have to figure out who is wearing what, and what kind of pet they owned. If you know what i'm talking about then I applaud you, I loved those as a kid. I think one of the reasons I love programming so much is because I love to come up with solutions to problems, or answers to puzzles. It's exciting for me, I can literally do it all day."
+        },
+        {
+           title: "Artist",
+           text: "I love to paint, and I love to pretty much do anything outside. I've been an artist for as long as I can remember, at least an artist at heart. I'm not great, but I enjoy it. When I was in high school I even had an 'internship' at an art studio where I would go paint all day. Best internship ever! I've been painting, and drawing ever since, I've even done some commercial work, not a lot but enough to get my feet wet."
+        },
+        {
+           title: "Outdoorist",
+           text: "Born and raised in Utah, so I guess I'm your typical Utahn when I say that I LOVE the outdoors, I love to ski, hike, bike, climb, fish, really anything outside, I love to do it!"
+        }
       ],
       imgArr:
       [
