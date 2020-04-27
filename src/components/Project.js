@@ -62,10 +62,7 @@ export default function Project(props){
 
                {features}
                <a className="projects-button title" style={{marginTop: '10px', display: "inline-block"}}>
-                  <button onClick={handleNext} style={{float: "left"}}>
-                     <h2>Next Project</h2>
-                  </button>
-
+                     {Number(id) === projectArray.length ? "" : <button onClick={handleNext} style={{float: "left"}}><h2>Next Project</h2></button>}
                </a>
 
             </div>
