@@ -1,27 +1,35 @@
 import { TabsContext } from '@mui/base'
-import { AppBar, Box, Toolbar, Tab, Tabs } from '@mui/material'
+import { AppBar, Toolbar, Tab, Tabs } from '@mui/material'
 import React, { useState } from 'react'
 
 const Navbar = () => {
-  const [value, setValue] = useState('one')
+  const [value, setValue] = useState('1')
 
   const handleChange = (e, newValue) => {
     setValue(newValue)
   }
 
+  const tabMargin = { marginRight: { xs: '0px', sm: '15px', md: '40px' } }
   return (
     <>
-      <AppBar position='static'>
+      <AppBar position='static' sx={{ height: '60px' }}>
         <Toolbar>
           <Tabs
             value={value}
             onChange={handleChange}
             textColor='secondary'
-            indicatorColor='secondary'
+            TabIndicatorProps={{
+              style: {
+                display: 'none',
+              },
+            }}
             aria-label='tabs'
+            sx={{
+              marginLeft: { xs: '10px', sm: '30px', md: '60px', lg: '120px' },
+            }}
           >
-            <Tab label='Projects' value='1' />
-            <Tab label='About Me' value='2' />
+            <Tab label='Projects' value='1' sx={tabMargin} />
+            <Tab label='About Me' value='2' sx={tabMargin} />
             <Tab label='Contact' value='3' />
           </Tabs>
         </Toolbar>

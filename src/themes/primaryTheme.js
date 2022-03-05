@@ -1,5 +1,21 @@
 import { createTheme } from '@mui/material'
 
-const rickGreen = '#78F37D'
+export default createTheme({
+  palette: {
+    mode: 'dark',
+    secondary: {
+      main: '#BC5980',
+    },
+  },
 
-export default createTheme({})
+  components: {
+    MuiTab: {
+      styleOverrides: {
+        root: {
+          color: 'white',
+          indicatorColor: 'white',
+        },
+      },
+    },
+  },
+})
