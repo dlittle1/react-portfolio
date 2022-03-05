@@ -15,8 +15,8 @@ const Home = () => {
           height: '100%',
         }}
       >
-        <Grid container justifyContent='space-evenly'>
-          <Grid item>
+        <Grid container justifyContent='space-evenly' direction={'column'}>
+          <Grid item md={9} xs={12} sx={{ marginTop: { xs: '0', md: '3rem' } }}>
             <Typography
               variant='h1'
               sx={{
@@ -42,10 +42,10 @@ const Home = () => {
               View Projects
             </Button>
           </Grid>
-          <Grid item>
+          <Grid item md={3}>
             <img
               src={ReactLogo}
-              style={{ maxWidth: '60%', marginTop: '50px' }}
+              style={{ maxWidth: '70%', marginTop: '50px' }}
             />
           </Grid>
         </Grid>
