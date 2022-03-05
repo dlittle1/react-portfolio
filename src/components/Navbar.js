@@ -10,30 +10,31 @@ const Navbar = () => {
   }
 
   const tabMargin = { marginRight: { xs: '0px', sm: '15px', md: '40px' } }
+  const tabsGroup = {
+    marginLeft: { xs: '10px', sm: '30px', md: '60px' },
+    marginTop: '15px',
+  }
   return (
     <>
-      <AppBar position='static' sx={{ height: '60px' }}>
-        <Toolbar>
-          <Tabs
-            value={value}
-            onChange={handleChange}
-            textColor='secondary'
-            TabIndicatorProps={{
-              style: {
-                display: 'none',
-              },
-            }}
-            aria-label='tabs'
-            sx={{
-              marginLeft: { xs: '10px', sm: '30px', md: '60px', lg: '120px' },
-            }}
-          >
-            <Tab label='Projects' value='1' sx={tabMargin} />
-            <Tab label='About Me' value='2' sx={tabMargin} />
-            <Tab label='Contact' value='3' />
-          </Tabs>
-        </Toolbar>
-      </AppBar>
+      <Toolbar>
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          textColor='secondary'
+          TabIndicatorProps={{
+            style: {
+              display: 'none',
+            },
+          }}
+          aria-label='tabs'
+          sx={tabsGroup}
+        >
+          <Tab label='Home' value='1' sx={tabMargin} />
+          <Tab label='Projects' value='2' sx={tabMargin} />
+          <Tab label='About Me' value='3' sx={tabMargin} />
+          <Tab label='Contact' value='4' />
+        </Tabs>
+      </Toolbar>
     </>
   )
 }
