@@ -7,7 +7,18 @@ export default createTheme({
       main: '#BC5980',
     },
   },
-
+  typography: {
+    h1: {
+      fontSize: '3rem',
+      fontWeight: 700,
+      color: 'white',
+    },
+    h2: {
+      fontSize: '2rem',
+      color: 'white',
+      fontWeight: 700,
+    },
+  },
   components: {
     MuiTab: {
       styleOverrides: {
