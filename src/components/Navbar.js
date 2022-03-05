@@ -11,8 +11,9 @@ const Navbar = () => {
 
   const tabMargin = { marginRight: { xs: '0px', sm: '15px', md: '40px' } }
   const tabsGroup = {
-    marginLeft: { xs: '10px', sm: '30px', md: '60px' },
+    marginLeft: { xs: '0px', sm: '30px', md: '60px' },
     marginTop: '15px',
+    position: 'fixed',
   }
   return (
     <>

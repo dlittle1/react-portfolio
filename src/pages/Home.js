@@ -1,12 +1,13 @@
 import { Typography, Box, Button, Grid } from '@mui/material'
 import React from 'react'
 import ReactLogo from '../assets/ReactColor.png'
+import Projects from './Projects'
 
 const bracketColor = { color: '#BC5980' }
 const nameColor = { color: '#D75F76' }
 const Home = () => {
   return (
-    <div style={{ height: '100vh', margin: 0, padding: 0 }}>
+    <Box sx={{ height: { xs: '50vh', md: '100vh' }, margin: 0, padding: 0 }}>
       <Box
         textAlign='center'
         sx={{
@@ -45,19 +46,19 @@ const Home = () => {
           <Box
             sx={{
               position: 'absolute',
-              top: { xs: '200px', sm: '0' },
+              top: { xs: '20px', sm: '0' },
               width: '100%',
               zIndex: -10,
             }}
           >
             <img
               src={ReactLogo}
-              style={{ maxHeight: '70%', maxWidth: '70%', opacity: '0.1' }}
+              style={{ maxHeight: '60%', maxWidth: '60%', opacity: '0.1' }}
             />
           </Box>
         </Grid>
       </Box>
-    </div>
+    </Box>
   )
 }
 
