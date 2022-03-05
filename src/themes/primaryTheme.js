@@ -9,12 +9,12 @@ export default createTheme({
   },
   typography: {
     h1: {
-      fontSize: '3rem',
+      fontSize: '4.5rem',
       fontWeight: 700,
       color: 'white',
     },
     h2: {
-      fontSize: '2rem',
+      fontSize: '4.5rem',
       color: 'white',
       fontWeight: 700,
     },
