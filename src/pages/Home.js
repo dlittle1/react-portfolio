@@ -6,7 +6,7 @@ const bracketColor = { color: '#BC5980' }
 const nameColor = { color: '#D75F76' }
 const Home = () => {
   return (
-    <div style={{ height: '90vh', margin: 0, padding: 0 }}>
+    <div style={{ height: '100vh', margin: 0, padding: 0 }}>
       <Box
         textAlign='center'
         sx={{
@@ -42,12 +42,19 @@ const Home = () => {
               View Projects
             </Button>
           </Grid>
-          <Grid item md={3}>
+          <Box
+            sx={{
+              position: 'absolute',
+              top: { xs: '200px', sm: '0' },
+              width: '100%',
+              zIndex: -10,
+            }}
+          >
             <img
               src={ReactLogo}
-              style={{ maxWidth: '70%', marginTop: '50px' }}
+              style={{ maxHeight: '70%', maxWidth: '70%', opacity: '0.1' }}
             />
-          </Grid>
+          </Box>
         </Grid>
       </Box>
     </div>
