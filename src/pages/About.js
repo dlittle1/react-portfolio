@@ -5,9 +5,14 @@ import { Box, Grid, Typography } from '@mui/material'
 const About = (props) => {
   return (
     <>
-      <Grid container justifyContent={'space-evenly'} pt={20} pb={20}>
+      <Grid
+        container
+        justifyContent={'space-evenly'}
+        pt={{ xs: 20, md: 5 }}
+        pb={20}
+      >
         <Box ref={props.refProp}></Box>
-        <Grid item xs={12} md={7}>
+        <Grid item xs={12} md={7} p={1}>
           <Box textAlign={'center'}>
             <Typography variant='h1'>something about</Typography>
             <Typography variant='h1' color='secondary.main'>

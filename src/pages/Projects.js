@@ -8,7 +8,12 @@ const Projects = (props) => {
   const bracketColor = { color: '#BC5980' }
   console.log(data)
   return (
-    <Box sx={{ height: { xs: '70vh', sm: '70vh' }, marginBottom: '4rem' }}>
+    <Box
+      sx={{
+        height: { xs: '70vh', sm: '100vh' },
+        marginBottom: '4rem',
+      }}
+    >
       <Box id='projects' ref={props.refProp}></Box>
       <Grid container spacing={4} padding={3}>
         {data.map((project, index) => (

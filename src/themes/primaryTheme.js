@@ -13,6 +13,9 @@ export default createTheme({
       fontSize: '4.5rem',
       fontWeight: 700,
       color: 'white',
+      '@media (max-width:500px)': {
+        fontSize: '3rem',
+      },
     },
     h2: {
       fontSize: '3rem',
