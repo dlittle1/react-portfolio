@@ -6,7 +6,7 @@ import Projects from './pages/Projects'
 import About from './pages/About'
 import { useRef } from 'react'
 import Project from './pages/Project'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 function App() {
   const homeRef = useRef(null)
   const projectsRef = useRef(null)
@@ -14,7 +14,7 @@ function App() {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <BrowserRouter>
+        <HashRouter basename='/'>
           <Routes>
             <Route
               path='/'
@@ -33,7 +33,7 @@ function App() {
             />
             <Route path='/Projects/:projectId' element={<Project />} />
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
       </ThemeProvider>
     </>
   )
