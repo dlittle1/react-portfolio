@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import RickAndMorty from '../assets/projectScreenshots/RickAndMortyHome.PNG'
 import QuizApp from '../assets/projectScreenshots/QuizApp.PNG'
 import { Box, Typography, Grid, Card } from '@mui/material'
-const Projects = () => {
+const Projects = (props) => {
   const bracketColor = { color: '#BC5980' }
   return (
-    <Box>
+    <Box sx={{ height: '100vh' }}>
+      <Box id='projects' ref={props.refProp}></Box>
       <Grid container spacing={4} padding={3}>
         <Grid item xs={12} md={6}>
           <Card>

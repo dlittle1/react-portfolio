@@ -1,12 +1,13 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import aboutMePhoto from '../assets/me.jpg'
-import { Box, Card, Grid, Typography } from '@mui/material'
+import { Box, Grid, Typography } from '@mui/material'
 
-const About = () => {
+const About = (props) => {
   return (
     <>
-      <Grid container marginTop={40}>
-        <Grid item xs={7}>
+      <Grid container justifyContent={'space-evenly'} pt={20} pb={20}>
+        <Box ref={props.refProp}></Box>
+        <Grid item xs={12} md={7}>
           <Box textAlign={'center'}>
             <Typography variant='h1'>something about</Typography>
             <Typography variant='h1' color='secondary.main'>
@@ -16,7 +17,7 @@ const About = () => {
               <Typography variant='h5'>🍟 + 😴 + 💻 </Typography>
             </Box>
           </Box>
-          <Box mt={5} px={20}>
+          <Box mt={5} px={{ xs: 5, md: 10, lg: 20 }}>
             <Typography>
               I really do love to code, not only is it something that I can do
               professionaly but it's something that I'm truly passionate about.
@@ -29,19 +30,21 @@ const About = () => {
               here to stay. I started in Ruby on Rails, some c++, and c#, but
               have since learned React, which is where my focus is now.
             </Typography>
+
             <br />
             <Typography>
               Born and raised in Utah, so I guess I'm your typical Utahn when I
               say that I LOVE the outdoors, I love to ski, hike, bike, climb,
               fish, really anything outside, I love to do it!
             </Typography>
+            <Box id='about'></Box>
           </Box>
         </Grid>
-        <Grid item xs={3}>
+        <Grid item xs={3} mt={5}>
           <Box>
             <img
               src={aboutMePhoto}
-              style={{ width: '100%', borderRadius: '1rem' }}
+              style={{ maxWidth: '100%', borderRadius: '1rem' }}
             />
           </Box>
         </Grid>

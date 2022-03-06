@@ -5,9 +5,10 @@ import Projects from './Projects'
 
 const bracketColor = { color: '#BC5980' }
 const nameColor = { color: '#D75F76' }
-const Home = () => {
+const Home = (props) => {
   return (
     <Box sx={{ height: { xs: '50vh', md: '100vh' }, margin: 0, padding: 0 }}>
+      <Box id='home' ref={props.refProp}></Box>
       <Box
         textAlign='center'
         sx={{
