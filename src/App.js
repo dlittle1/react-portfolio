@@ -3,6 +3,7 @@ import { ThemeProvider } from '@mui/material'
 import theme from './themes/primaryTheme'
 import Home from './pages/Home'
 import Projects from './pages/Projects'
+import About from './pages/About'
 function App() {
   return (
     <>
@@ -10,6 +11,7 @@ function App() {
         <Navbar />
         <Home />
         <Projects />
+        <About />
       </ThemeProvider>
     </>
   )

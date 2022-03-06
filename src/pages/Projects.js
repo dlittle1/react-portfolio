@@ -6,10 +6,6 @@ const Projects = () => {
   const bracketColor = { color: '#BC5980' }
   return (
     <Box>
-      <Typography variant='h2' sx={{ marginLeft: '20px' }}>
-        <span style={bracketColor}>&#123;</span>Projects
-        <span style={bracketColor}>&#125;</span>
-      </Typography>
       <Grid container spacing={4} padding={3}>
         <Grid item xs={12} md={6}>
           <Card>

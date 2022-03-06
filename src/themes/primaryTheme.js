@@ -14,9 +14,12 @@ export default createTheme({
       color: 'white',
     },
     h2: {
-      fontSize: '4.5rem',
+      fontSize: '3rem',
       color: 'white',
       fontWeight: 700,
+    },
+    body1: {
+      color: 'white',
     },
   },
   components: {
