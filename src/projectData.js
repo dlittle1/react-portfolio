@@ -15,6 +15,7 @@ const data = [
     ],
     imgs: [RickAndMortyHome, RickAndMortyCharacter],
     github: 'https://github.com/dlittle1/RickAndMortyUniverse',
+    website: 'http://dlittle1.github.io/RickAndMortyUniverse',
   },
   {
     title: 'Quiz App',
@@ -26,6 +27,7 @@ const data = [
     ],
     imgs: [QuizApp, QuizAppEndScreen],
     github: 'https://github.com/dlittle1/Quiz-App',
+    website: 'http://dlittle1.github.io/Quiz-App',
   },
 ]
 export default data

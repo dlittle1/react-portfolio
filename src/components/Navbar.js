@@ -78,7 +78,6 @@ const Navbar = (props) => {
           <Tab label='Home' value='1' sx={tabMargin} />
           <Tab label='Projects' value='2' sx={tabMargin} />
           <Tab label='About Me' value='3' sx={tabMargin} />
-          <Tab label='Contact' value='4' />
         </Tabs>
       </Toolbar>
     </>

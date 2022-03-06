@@ -10,7 +10,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons'
 const Project = () => {
   const params = useParams()
   const [value, setValue] = useState('2')
-  const { title, description, importantPoints, imgs, github } =
+  const { title, description, importantPoints, imgs, github, website } =
     data[params.projectId]
 
   const handleChange = (e, newValue) => {
@@ -67,7 +67,13 @@ const Project = () => {
               style={{ textDecoration: 'none' }}
             >
               <FontAwesomeIcon icon={faGithub} style={{ color: 'white' }} />{' '}
-              <Typography>Github</Typography>
+            </a>
+            <a
+              href={website}
+              target={'_blank'}
+              style={{ textDecoration: 'none' }}
+            >
+              <Typography>Website: {website}</Typography>
             </a>
           </Typography>
         </Box>
