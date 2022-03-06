@@ -5,7 +5,6 @@ import React, { useEffect, useState } from 'react'
 const Navbar = (props) => {
   const [value, setValue] = useState('1')
 
-  console.log(props)
   const handleChange = (e, newValue) => {
     setValue(newValue)
 
@@ -45,7 +44,7 @@ const Navbar = (props) => {
       setValue('1')
     } else if (isInViewport(rectProjects)) {
       setValue('2')
-    } else {
+    } else if (isInViewport(rectAbout)) {
       setValue('3')
     }
   }

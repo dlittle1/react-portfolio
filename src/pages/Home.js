@@ -6,6 +6,9 @@ import Projects from './Projects'
 const bracketColor = { color: '#BC5980' }
 const nameColor = { color: '#D75F76' }
 const Home = (props) => {
+  const handleClick = () => {
+    props.projectsRef.current.scrollIntoView()
+  }
   return (
     <Box sx={{ height: { xs: '50vh', md: '100vh' }, margin: 0, padding: 0 }}>
       <Box id='home' ref={props.refProp}></Box>
@@ -40,6 +43,7 @@ const Home = (props) => {
               variant='contained'
               color='secondary'
               sx={{ marginTop: '20px' }}
+              onClick={handleClick}
             >
               View Projects
             </Button>

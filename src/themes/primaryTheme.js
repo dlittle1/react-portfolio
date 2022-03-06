@@ -1,10 +1,11 @@
 import { createTheme } from '@mui/material'
 
+const redColor = '#BC5980'
 export default createTheme({
   palette: {
     mode: 'dark',
     secondary: {
-      main: '#BC5980',
+      main: redColor,
     },
   },
   typography: {
@@ -17,6 +18,12 @@ export default createTheme({
       fontSize: '3rem',
       color: 'white',
       fontWeight: 700,
+    },
+    h4: {
+      color: redColor,
+    },
+    h5: {
+      color: 'white',
     },
     body1: {
       color: 'white',

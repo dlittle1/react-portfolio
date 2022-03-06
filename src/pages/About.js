@@ -40,7 +40,7 @@ const About = (props) => {
             <Box id='about'></Box>
           </Box>
         </Grid>
-        <Grid item xs={3} mt={5}>
+        <Grid item xs={5} md={3} mt={5}>
           <Box>
             <img
               src={aboutMePhoto}
