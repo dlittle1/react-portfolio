@@ -10,11 +10,19 @@ const Projects = (props) => {
   return (
     <Box
       sx={{
-        height: { xs: '70vh', sm: '100vh' },
         marginBottom: '4rem',
       }}
     >
-      <Box id='projects' ref={props.refProp}></Box>
+      <Box id='projects' ref={props.refProp}>
+        <Typography
+          textAlign='center'
+          variant='h1'
+          mb={3}
+          xs={{ fontSize: { xs: '2rem', sm: '3rem', lg: '4.5rem' } }}
+        >
+          Projects
+        </Typography>
+      </Box>
       <Grid container spacing={4} padding={3}>
         {data.map((project, index) => (
           <Grid

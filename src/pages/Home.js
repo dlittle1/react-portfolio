@@ -1,4 +1,4 @@
-import { Typography, Box, Button, Grid } from '@mui/material'
+import { Typography, Box, Button, Grid, Container, Card } from '@mui/material'
 import React from 'react'
 import ReactLogo from '../assets/ReactColor.png'
 import Projects from './Projects'
@@ -10,58 +10,63 @@ const Home = (props) => {
     props.projectsRef.current.scrollIntoView()
   }
   return (
-    <Box sx={{ height: { xs: '50vh', md: '100vh' }, margin: 0, padding: 0 }}>
+    <Box sx={{ height: '95vh', margin: 0, padding: 0, backgroundColor: '' }}>
       <Box id='home' ref={props.refProp}></Box>
       <Box
-        textAlign='center'
         sx={{
           overflow: 'hidden',
           position: 'relative',
           height: '100%',
+          textAlign: 'center',
         }}
       >
-        <Grid container justifyContent='space-evenly' direction={'column'}>
-          <Grid item md={9} xs={12} sx={{ marginTop: { xs: '0', md: '3rem' } }}>
-            <Typography
-              variant='h1'
-              sx={{
-                marginTop: '2rem',
-                fontSize: { xs: '2rem', md: '3rem', lg: '4.5rem' },
-              }}
-            >
-              <span style={bracketColor}>&#123;</span>"Hello World. I'm{' '}
-              <span style={nameColor}>Dylan Little</span>."
-              <span style={bracketColor}>&#125;</span>
-            </Typography>
-            <Typography
-              variant='h2'
-              sx={{ fontSize: { xs: '2rem', md: '3rem', lg: '4.5rem' } }}
-            >
-              A React Developer.
-            </Typography>
-            <Button
-              variant='contained'
-              color='secondary'
-              sx={{ marginTop: '20px' }}
-              onClick={handleClick}
-            >
-              View Projects
-            </Button>
-          </Grid>
-          <Box
+        <Box
+          sx={{
+            marginTop: { xs: '150px' },
+          }}
+        >
+          <Typography
+            variant='h1'
             sx={{
-              position: 'absolute',
-              top: { xs: '20px', sm: '0' },
-              width: '100%',
-              zIndex: -10,
+              marginTop: '2rem',
+              fontSize: { xs: '4rem', sm: '4rem', lg: '4.5rem' },
+              marginBottom: '10px',
+              marginLeft: '10px',
+              marginRight: '10px',
             }}
           >
-            <img
-              src={ReactLogo}
-              style={{ maxHeight: '60%', maxWidth: '60%', opacity: '0.1' }}
-            />
-          </Box>
-        </Grid>
+            <span style={bracketColor}>&#123;</span>"Hello World. I'm{' '}
+            <span style={nameColor}>Dylan Little</span>."
+            <span style={bracketColor}>&#125;</span>
+          </Typography>
+          <Typography
+            variant='h1'
+            sx={{ fontSize: { xs: '3rem', sm: '4rem' } }}
+          >
+            A React Developer.
+          </Typography>
+          <Button
+            variant='contained'
+            color='secondary'
+            sx={{ marginTop: '20px' }}
+            onClick={handleClick}
+          >
+            View Projects
+          </Button>
+        </Box>
+        <Box
+          sx={{
+            position: 'absolute',
+            top: { xs: '400px', sm: '450px', md: '100px', lg: '0' },
+            width: '100%',
+            zIndex: -10,
+          }}
+        >
+          <img
+            src={ReactLogo}
+            style={{ maxHeight: '60%', maxWidth: '60%', opacity: '0.1' }}
+          />
+        </Box>
       </Box>
     </Box>
   )

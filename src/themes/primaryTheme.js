@@ -1,9 +1,9 @@
 import { createTheme } from '@mui/material'
 
+const textColor = 'white'
 const redColor = '#BC5980'
 export default createTheme({
   palette: {
-    mode: 'dark',
     secondary: {
       main: redColor,
     },
@@ -12,31 +12,32 @@ export default createTheme({
     h1: {
       fontSize: '4.5rem',
       fontWeight: 700,
-      color: 'white',
+      color: textColor,
       '@media (max-width:500px)': {
         fontSize: '3rem',
       },
     },
     h2: {
       fontSize: '3rem',
-      color: 'white',
+      color: textColor,
       fontWeight: 700,
     },
     h4: {
-      color: redColor,
+      color: textColor,
+      fontWeight: 500,
     },
     h5: {
-      color: 'white',
+      color: textColor,
     },
     body1: {
-      color: 'white',
+      color: textColor,
     },
   },
   components: {
     MuiTab: {
       styleOverrides: {
         root: {
-          color: 'white',
+          color: textColor,
           indicatorColor: 'white',
         },
       },
