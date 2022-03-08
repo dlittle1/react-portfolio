@@ -66,7 +66,7 @@ const Project = () => {
               target={'_blank'}
               style={{ textDecoration: 'none' }}
             >
-              <FontAwesomeIcon icon={faGithub} style={{ color: 'white' }} />{' '}
+              <FontAwesomeIcon icon={faGithub} style={{ color: '#2c2c2c' }} />{' '}
             </a>
             <a
               href={website}
