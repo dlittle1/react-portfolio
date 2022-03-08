@@ -9,9 +9,13 @@ const Navbar = (props) => {
     setValue(newValue)
 
     if (newValue === '1') {
-      props.homeRefProp.current.scrollIntoView()
+      props.homeRefProp.current.scrollIntoView({ block: 'center' })
     } else if (newValue === '2') {
-      props.projectsRefProp.current.scrollIntoView()
+      const projectsElem = props.projectsRefProp.current
+      const yOffset = -60
+      const y =
+        projectsElem.getBoundingClientRect().top + window.pageYOffset + yOffset
+      window.scrollTo({ top: y, behavior: 'smooth' })
     } else {
       props.aboutRefProp.current.scrollIntoView()
     }
@@ -65,24 +69,26 @@ const Navbar = (props) => {
 
   return (
     <>
-      <Toolbar sx={{ zIndex: 105 }}>
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          textColor='secondary'
-          TabIndicatorProps={{
-            style: {
-              display: 'none',
-            },
-          }}
-          aria-label='tabs'
-          sx={tabsGroup}
-        >
-          <Tab label='Home' value='1' sx={tabMargin} />
-          <Tab label='Projects' value='2' sx={tabMargin} />
-          <Tab label='About Me' value='3' sx={tabMargin} />
-        </Tabs>
-      </Toolbar>
+      <AppBar sx={{ backgroundColor: 'white' }}>
+        <Toolbar sx={{ zIndex: 105 }}>
+          <Tabs
+            value={value}
+            onChange={handleChange}
+            textColor='secondary'
+            TabIndicatorProps={{
+              style: {
+                display: 'none',
+              },
+            }}
+            aria-label='tabs'
+            sx={tabsGroup}
+          >
+            <Tab label='Home' value='1' sx={tabMargin} />
+            <Tab label='Projects' value='2' sx={tabMargin} />
+            <Tab label='About Me' value='3' sx={tabMargin} />
+          </Tabs>
+        </Toolbar>
+      </AppBar>
     </>
   )
 }

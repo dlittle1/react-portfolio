@@ -1,6 +1,6 @@
 import { createTheme } from '@mui/material'
 
-const textColor = 'white'
+const textColor = '#2c2c2c'
 const redColor = '#BC5980'
 export default createTheme({
   palette: {

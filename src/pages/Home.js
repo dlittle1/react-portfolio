@@ -2,34 +2,39 @@ import { Typography, Box, Button, Grid, Container, Card } from '@mui/material'
 import React from 'react'
 import ReactLogo from '../assets/ReactColor.png'
 import Projects from './Projects'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCss3Alt } from '@fortawesome/free-brands-svg-icons'
+import { faGit } from '@fortawesome/free-brands-svg-icons'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faReact } from '@fortawesome/free-brands-svg-icons'
+import { faJsSquare } from '@fortawesome/free-brands-svg-icons'
+import { faHtml5 } from '@fortawesome/free-brands-svg-icons'
 
 const bracketColor = { color: '#BC5980' }
 const nameColor = { color: '#D75F76' }
+const icon = { color: '#2c2c2c', padding: '0' }
 const Home = (props) => {
   const handleClick = () => {
     props.projectsRef.current.scrollIntoView()
   }
   return (
-    <Box sx={{ height: '95vh', margin: 0, padding: 0, backgroundColor: '' }}>
+    <Box sx={{ height: '95vh', backgroundColor: '' }}>
       <Box id='home' ref={props.refProp}></Box>
-      <Box
+      <Grid
+        container
         sx={{
-          overflow: 'hidden',
-          position: 'relative',
-          height: '100%',
-          textAlign: 'center',
+          marginTop: { xs: '150px' },
         }}
+        justifyContent='center'
+        direction='row'
+        alignItems='center'
       >
-        <Box
-          sx={{
-            marginTop: { xs: '150px' },
-          }}
-        >
+        <Grid item textAlign={'center'} mb={5}>
           <Typography
             variant='h1'
             sx={{
               marginTop: '2rem',
-              fontSize: { xs: '4rem', sm: '4rem', lg: '4.5rem' },
+              fontSize: { xs: '3rem', sm: '4rem', lg: '4.5rem' },
               marginBottom: '10px',
               marginLeft: '10px',
               marginRight: '10px',
@@ -40,34 +45,40 @@ const Home = (props) => {
             <span style={bracketColor}>&#125;</span>
           </Typography>
           <Typography
-            variant='h1'
-            sx={{ fontSize: { xs: '3rem', sm: '4rem' } }}
+            variant='h5'
+            sx={{ fontSize: { xs: '1rem', sm: '1.5rem', md: '2rem' } }}
           >
-            A React Developer.
+            A full stack web developer and designer.
           </Typography>
           <Button
-            variant='contained'
+            variant='outlined'
             color='secondary'
             sx={{ marginTop: '20px' }}
             onClick={handleClick}
           >
             View Projects
           </Button>
-        </Box>
-        <Box
-          sx={{
-            position: 'absolute',
-            top: { xs: '400px', sm: '450px', md: '100px', lg: '0' },
-            width: '100%',
-            zIndex: -10,
-          }}
-        >
-          <img
-            src={ReactLogo}
-            style={{ maxHeight: '60%', maxWidth: '60%', opacity: '0.1' }}
-          />
-        </Box>
-      </Box>
+        </Grid>
+        <Grid item xs={11} pt={3}>
+          <Grid container justifyContent='space-evenly' spacing={3}>
+            <Grid item>
+              <FontAwesomeIcon icon={faGit} size='3x' style={icon} />
+            </Grid>
+            <Grid item>
+              <FontAwesomeIcon icon={faReact} size='3x' style={icon} />
+            </Grid>
+            <Grid item>
+              <FontAwesomeIcon icon={faJsSquare} size='3x' style={icon} />
+            </Grid>
+            <Grid item>
+              <FontAwesomeIcon icon={faHtml5} size='3x' style={icon} />
+            </Grid>
+            <Grid item>
+              <FontAwesomeIcon icon={faCss3Alt} size='3x' style={icon} />
+            </Grid>
+          </Grid>
+        </Grid>
+      </Grid>
     </Box>
   )
 }

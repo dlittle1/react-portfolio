@@ -8,11 +8,7 @@ const Projects = (props) => {
   const bracketColor = { color: '#BC5980' }
   console.log(data)
   return (
-    <Box
-      sx={{
-        marginBottom: '4rem',
-      }}
-    >
+    <Box sx={{ marginBottom: { xs: '1rem', md: '20rem' } }}>
       <Box id='projects' ref={props.refProp}>
         <Typography
           textAlign='center'
