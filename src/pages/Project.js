@@ -74,6 +74,7 @@ const Project = () => {
             <a
               href={github}
               target={'_blank'}
+              rel='noreferrer'
               style={{ textDecoration: 'none' }}
             >
               <FontAwesomeIcon icon={faGithub} style={{ color: '#2c2c2c' }} />{' '}
@@ -81,6 +82,7 @@ const Project = () => {
             <a
               href={website}
               target={'_blank'}
+              rel='noreferrer'
               style={{ textDecoration: 'none' }}
             >
               <Typography>Website: {website}</Typography>
