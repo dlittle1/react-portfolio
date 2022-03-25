@@ -1,7 +1,8 @@
-import RickAndMortyHome from './assets/projectScreenshots/RickAndMortyHome.PNG'
-import RickAndMortyCharacter from './assets/projectScreenshots/RickAndMortyCharacter.PNG'
-import QuizApp from './assets/projectScreenshots/QuizApp.PNG'
-import QuizAppEndScreen from './assets/projectScreenshots/QuizAppEndScreen.PNG'
+import rickAndMortyHome from './assets/projectScreenshots/RickAndMortyHome.PNG';
+import rickAndMortyCharacter from './assets/projectScreenshots/RickAndMortyCharacter.PNG';
+import quizApp from './assets/projectScreenshots/QuizApp.PNG';
+import quizAppEndScreen from './assets/projectScreenshots/QuizAppEndScreen.PNG';
+import sneakerHeadsLanding from './assets/projectScreenshots/sneaker-heads-landing.png';
 const data = [
   {
     title: 'Rick and Morty Universe',
@@ -13,7 +14,7 @@ const data = [
       'Used Lodash and debounce to ensure Infinite scroll was not called more than once at a time.',
       'Cleaned the requested wiki HTML data to ensure that no Cross Site Scripting attacks could be made.',
     ],
-    imgs: [RickAndMortyHome, RickAndMortyCharacter],
+    imgs: [rickAndMortyHome, rickAndMortyCharacter],
     github: 'https://github.com/dlittle1/RickAndMortyUniverse',
     website: 'http://dlittle1.github.io/RickAndMortyUniverse',
   },
@@ -25,9 +26,21 @@ const data = [
       'implemented the use of axios for making API calls.',
       'used context to deliver the choices made by the user to the question component.',
     ],
-    imgs: [QuizApp, QuizAppEndScreen],
+    imgs: [quizApp, quizAppEndScreen],
     github: 'https://github.com/dlittle1/Quiz-App',
     website: 'http://dlittle1.github.io/Quiz-App',
   },
-]
-export default data
+  {
+    title: 'Sneaker Heads',
+    description:
+      "Sneaker Heads is an online social media platform for those that love shoes. It's a place where people can go to share pics of their favorite shoes. They can like other shoes, comment on other shoes, they can create update and delete their own shoes. All of these are stored using MongoDB, the server is run on Node.JS and Express.",
+    importantPoints: [
+      'Created an API specifically for the shoes.',
+      'MongoDB was used to hold the information: shoes, comments, likes, image urls, etc.',
+    ],
+    imgs: [sneakerHeadsLanding],
+    github: 'https://github.com/dlittle1/sneaker-heads',
+    website: 'https://sneaker-heads1.herokuapp.com/',
+  },
+];
+export default data;

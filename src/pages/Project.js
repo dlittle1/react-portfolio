@@ -1,34 +1,38 @@
-import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
-import data from '../projectData'
-import { Toolbar, Tabs, Tab, Box, Typography, Grid } from '@mui/material'
-import { Link } from 'react-router-dom'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAddressCard } from '@fortawesome/free-regular-svg-icons'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import data from '../projectData';
+import { Toolbar, Tabs, Tab, Box, Typography, Grid } from '@mui/material';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAddressCard } from '@fortawesome/free-regular-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const Project = () => {
-  const params = useParams()
-  const [value, setValue] = useState('2')
+  const params = useParams();
+  const [value, setValue] = useState('2');
   const { title, description, importantPoints, imgs, github, website } =
-    data[params.projectId]
+    data[params.projectId];
 
   const handleChange = (e, newValue) => {
-    setValue(newValue)
-  }
+    setValue(newValue);
+  };
 
   useEffect(() => {
-    const path = window.location.pathname
+    const path = window.location.pathname;
     if (path === '/projects/0') {
       if (value !== '2') {
-        setValue('2')
+        setValue('2');
       }
     } else if (path === '/projects/1') {
       if (value !== '3') {
-        setValue('3')
+        setValue('3');
+      }
+    } else if (path === '/projects/2') {
+      if (value !== '4') {
+        setValue('4');
       }
     }
-  })
+  });
 
   return (
     <>
@@ -52,6 +56,12 @@ const Project = () => {
             value='2'
           />
           <Tab component={Link} to={'/projects/1'} label='Quiz App' value='3' />
+          <Tab
+            component={Link}
+            to={'/projects/2'}
+            label='Sneaker-heads'
+            value='4'
+          />
         </Tabs>
       </Toolbar>
 
@@ -97,7 +107,7 @@ const Project = () => {
                   <Typography>{point}</Typography>
                   <br />
                 </Box>
-              )
+              );
             })}
           </Grid>
 
@@ -110,7 +120,7 @@ const Project = () => {
         </Grid>
       </Box>
     </>
-  )
-}
+  );
+};
 
-export default Project
+export default Project;
