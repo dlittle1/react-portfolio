@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/static/css/main.ed71459c.css",
-    "main.js": "/static/js/main.8ec31a2c.js",
+    "main.js": "/static/js/main.062a63a6.js",
     "static/media/sneakerheads2.png": "/static/media/sneakerheads2.03be55b932f6032820ab.png",
     "static/media/RTV2.png": "/static/media/RTV2.869e00d1c2be9a072a6c.png",
     "static/media/sneaker-heads-landing.png": "/static/media/sneaker-heads-landing.8c4222cf96a812065da3.png",
     "static/media/ReactColor.png": "/static/media/ReactColor.cebe935e49e766bf7452.png",
     "static/media/QuizApp.PNG": "/static/media/QuizApp.648bc8e718440d52d68f.PNG",
-    "static/media/RTV1.png": "/static/media/RTV1.8f1d346b8125a5f2cc53.png",
     "static/media/QuizAppEndScreen.PNG": "/static/media/QuizAppEndScreen.ed625a0ecc2dc2337926.PNG",
+    "static/media/RTV1.png": "/static/media/RTV1.db5e767ceb9b6085c385.png",
     "static/media/RickAndMortyHome.PNG": "/static/media/RickAndMortyHome.75b47edf9b5819acc2f7.PNG",
     "static/media/RickAndMortyCharacter.PNG": "/static/media/RickAndMortyCharacter.17996135048ba282346c.PNG",
     "static/media/me.jpg": "/static/media/me.1012f9cbb5c934d62093.jpg",
     "index.html": "/index.html",
     "main.ed71459c.css.map": "/static/css/main.ed71459c.css.map",
-    "main.8ec31a2c.js.map": "/static/js/main.8ec31a2c.js.map"
+    "main.062a63a6.js.map": "/static/js/main.062a63a6.js.map"
   },
   "entrypoints": [
     "static/css/main.ed71459c.css",
-    "static/js/main.8ec31a2c.js"
+    "static/js/main.062a63a6.js"
   ]
 }
