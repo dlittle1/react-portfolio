@@ -3,7 +3,25 @@ import rickAndMortyCharacter from './assets/projectScreenshots/RickAndMortyChara
 import quizApp from './assets/projectScreenshots/QuizApp.PNG';
 import quizAppEndScreen from './assets/projectScreenshots/QuizAppEndScreen.PNG';
 import sneakerHeadsLanding from './assets/projectScreenshots/sneaker-heads-landing.png';
+import RTV1 from './assets/projectScreenshots/RTV1.png';
+import RTV2 from './assets/projectScreenshots/RTV2.png';
+
 const data = [
+  {
+    title: 'Rock the Vote',
+    description:
+      "Rock the Vote is a web application that allows you to post about different political views and vote on the most popular one. It's a great way to get involved in politics and to show your support for your local candidates. This application was developed on the MERN stack. I was responsible for the front-end and back-end development. It is mobile responsive and has a clean and simple design. The database is hosted on MongoDB Atlas, while the server is hosted on Heroku.",
+    importantPoints: [
+      'Used context to store user state, as well as access API calls.',
+      'The user is able to like posts that interest them.',
+      'Posts can be sorted by new, popularity, tags, current user likes, and current user posts.',
+      'Users can comment on posts.',
+      'App is secure, with hashing of passwords, authentication and authorization.',
+    ],
+    imgs: [RTV1, RTV2],
+    github: 'https://github.com/dlittle1/political-issue-project',
+    website: 'https://rock-the-vote1.herokuapp.com/',
+  },
   {
     title: 'Rick and Morty Universe',
     description:

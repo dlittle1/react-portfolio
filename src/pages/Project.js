@@ -52,15 +52,21 @@ const Project = () => {
           <Tab
             component={Link}
             to={'/projects/0'}
-            label='Rick And Morty'
+            label='Rock the Vote'
             value='2'
           />
-          <Tab component={Link} to={'/projects/1'} label='Quiz App' value='3' />
           <Tab
             component={Link}
-            to={'/projects/2'}
+            to={'/projects/1'}
+            label='Rick And Morty'
+            value='3'
+          />
+          <Tab component={Link} to={'/projects/2'} label='Quiz App' value='4' />
+          <Tab
+            component={Link}
+            to={'/projects/3'}
             label='Sneaker-heads'
-            value='4'
+            value='5'
           />
         </Tabs>
       </Toolbar>
