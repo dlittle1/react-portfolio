@@ -31,6 +31,10 @@ const Project = () => {
       if (value !== '4') {
         setValue('4');
       }
+    } else if (path === '/projects/3') {
+      if (value !== '5') {
+        setValue('5');
+      }
     }
   });
 

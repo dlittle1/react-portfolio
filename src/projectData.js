@@ -3,6 +3,7 @@ import rickAndMortyCharacter from './assets/projectScreenshots/RickAndMortyChara
 import quizApp from './assets/projectScreenshots/QuizApp.PNG';
 import quizAppEndScreen from './assets/projectScreenshots/QuizAppEndScreen.PNG';
 import sneakerHeadsLanding from './assets/projectScreenshots/sneaker-heads-landing.png';
+import sneakerheads2 from './assets/projectScreenshots/sneakerheads2.png';
 import RTV1 from './assets/projectScreenshots/RTV1.png';
 import RTV2 from './assets/projectScreenshots/RTV2.png';
 
@@ -56,7 +57,7 @@ const data = [
       'Created an API specifically for the shoes.',
       'MongoDB was used to hold the information: shoes, comments, likes, image urls, etc.',
     ],
-    imgs: [sneakerHeadsLanding],
+    imgs: [sneakerHeadsLanding, sneakerheads2],
     github: 'https://github.com/dlittle1/sneaker-heads',
     website: 'https://sneaker-heads1.herokuapp.com/',
   },
