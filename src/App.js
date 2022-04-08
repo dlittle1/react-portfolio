@@ -7,6 +7,7 @@ import About from './pages/About';
 import { useRef } from 'react';
 import Project from './pages/Project';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import './styles/App.css';
 function App() {
   const homeRef = useRef(null);
   const projectsRef = useRef(null);
