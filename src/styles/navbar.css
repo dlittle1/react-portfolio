@@ -1,0 +1,23 @@
+.nav {
+  background-color: #ffffff;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+.nav-items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  list-style-type: none;
+}
+
+.nav-item {
+  font-weight: bold;
+  color: #bc5980;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
