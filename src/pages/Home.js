@@ -41,7 +41,7 @@ const Home = (props) => {
                 data-for='gitIcon'
               />
               <ReactTooltip id='gitIcon' place='top' type='dark' effect='float'>
-                <p>git</p>
+                <p>Git</p>
               </ReactTooltip>
             </div>
             <div className='home-icon-container'>
@@ -89,7 +89,7 @@ const Home = (props) => {
                 type='dark'
                 effect='float'
               >
-                <p>Node</p>
+                <p>Node.js</p>
               </ReactTooltip>
             </div>
             <div className='home-icon-container'>

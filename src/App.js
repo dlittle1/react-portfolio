@@ -34,8 +34,8 @@ function App() {
               </>
             }
           />
-          <Route path='/projects/:projectId' element={<Project />} />
         </Route>
+        <Route path='/projects/:projectId' element={<Project />} />
       </Routes>
     </BrowserRouter>
   );

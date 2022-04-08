@@ -1,6 +1,6 @@
-import React, { useRef } from 'react'
-import aboutMePhoto from '../assets/me.jpg'
-import { Box, Grid, Typography } from '@mui/material'
+import React, { useRef } from 'react';
+import aboutMePhoto from '../assets/me.jpg';
+import { Box, Grid, Typography } from '@mui/material';
 
 const About = (props) => {
   return (
@@ -12,38 +12,37 @@ const About = (props) => {
         pb={20}
       >
         <Box ref={props.refProp}></Box>
-        <Grid item xs={12} md={7} p={1}>
-          <Box textAlign={'center'}>
-            <Typography variant='h1'>something about</Typography>
-            <Typography variant='h1' color='secondary.main'>
-              Dylan Little
-            </Typography>
+        <Grid item xs={12} md={7} p={1} sx={{ color: 'white' }}>
+          <div textAlign={'center'}>
+            <h1>something about</h1>
+            <h1>Dylan Little</h1>
+
             <Box mt={5}>
               <Typography variant='h5'>🍟 + 😴 + 💻 </Typography>
             </Box>
-          </Box>
-          <Box mt={5} px={{ xs: 5, md: 10, lg: 20 }}>
-            <Typography>
+          </div>
+          <div mt={5} px={{ xs: 5, md: 10, lg: 20 }}>
+            <p>
               I really do love to code, not only is it something that I can do
               professionaly but it's something that I'm truly passionate about.
               I enjoy taking complex problems and turning them into solutions.
-            </Typography>
+            </p>
             <br />
-            <Typography>
+            <p>
               I've been coding off and on for years, life has it's twists and
               turns which have thrown me through some loops, but I'm back and
               here to stay. I started in Ruby on Rails, some c++, and c#, but
               have since learned React, which is where my focus is now.
-            </Typography>
+            </p>
 
             <br />
-            <Typography>
+            <p>
               Born and raised in Utah, so I guess I'm your typical Utahn when I
               say that I LOVE the outdoors, I love to ski, hike, bike, climb,
               fish, really anything outside, I love to do it!
-            </Typography>
-            <Box id='about'></Box>
-          </Box>
+            </p>
+            <div id='about'></div>
+          </div>
         </Grid>
         <Grid item xs={5} md={3} mt={5}>
           <Box>
@@ -55,7 +54,7 @@ const About = (props) => {
         </Grid>
       </Grid>
     </>
-  )
-}
+  );
+};
 
-export default About
+export default About;
