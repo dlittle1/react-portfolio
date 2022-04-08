@@ -64,3 +64,11 @@ h2 {
   width: 100%;
   padding: 40px 0px;
 }
+
+.home-icon-container {
+  position: relative;
+}
+
+.home-icon-float {
+  position: absolute;
+}
