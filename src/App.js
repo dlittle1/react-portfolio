@@ -13,30 +13,31 @@ function App() {
   const projectsRef = useRef(null);
   const aboutRef = useRef(null);
   return (
-    <>
-      <ThemeProvider theme={theme}>
-        <BrowserRouter>
-          <Routes>
-            <Route
-              path='/'
-              element={
-                <>
-                  <Navbar
-                    homeRefProp={homeRef}
-                    projectsRefProp={projectsRef}
-                    aboutRefProp={aboutRef}
-                  />
-                  <Home refProp={homeRef} projectsRef={projectsRef} />
-                  <Projects refProp={projectsRef} />
-                  <About refProp={aboutRef} />
-                </>
-              }
+    <BrowserRouter>
+      <Routes>
+        <Route
+          element={
+            <Navbar
+              homeRefProp={homeRef}
+              projectsRefProp={projectsRef}
+              aboutRefProp={aboutRef}
             />
-            <Route path='/projects/:projectId' element={<Project />} />
-          </Routes>
-        </BrowserRouter>
-      </ThemeProvider>
-    </>
+          }
+        >
+          <Route
+            path='/'
+            element={
+              <>
+                <Home refProp={homeRef} projectsRef={projectsRef} />
+                <Projects refProp={projectsRef} />
+                <About refProp={aboutRef} />
+              </>
+            }
+          />
+          <Route path='/projects/:projectId' element={<Project />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
