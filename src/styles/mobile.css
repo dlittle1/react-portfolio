@@ -43,6 +43,9 @@
     width: 80%;
   }
 
+  .about-description .home-title-name {
+    line-height: 4rem;
+  }
   .about-image {
     width: 60%;
   }
