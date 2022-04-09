@@ -1,12 +1,26 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import './component-styles/drawer.css';
 import NavItem from './NavItem';
 import projectData from '../data/projectData';
 
-const Drawer = ({ drawerIsOpen }) => {
+const Drawer = ({ drawerIsOpen, handleDrawer }) => {
+  const drawerRef = useRef(null);
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (drawerRef.current && !drawerRef.current.contains(event.target)) {
+        handleDrawer();
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [handleDrawer]);
+
   if (drawerIsOpen) {
     return (
-      <div className='drawer'>
+      <div className='drawer' ref={drawerRef}>
         <ul>
           <NavItem title='Home' linkTo={'/'} />
           {projectData.map((project, index) => (

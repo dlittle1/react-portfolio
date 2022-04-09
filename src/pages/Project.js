@@ -20,7 +20,7 @@ const Project = () => {
   return (
     <>
       <ProjectsNavbar handleDrawer={handleDrawer} />
-      <Drawer drawerIsOpen={drawerIsOpen} />
+      <Drawer drawerIsOpen={drawerIsOpen} handleDrawer={handleDrawer} />
       <div className='project'>
         <div>
           <h1>{title}</h1>
