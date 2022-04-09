@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAddressCard } from '@fortawesome/free-regular-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import ProjectsNavbar from '../components/ProjectsNavbar';
+import '../styles/project.css';
 
 const Project = () => {
   const params = useParams();
@@ -18,62 +19,55 @@ const Project = () => {
     <>
       <ProjectsNavbar width='70%' />
 
-      <Box>
-        <Box textAlign={'center'}>
-          <Typography variant='h1'>{title} </Typography>
-        </Box>
-        <Box textAlign={'center'}>
-          <Typography variant={'h2'} sx={{ textDecoration: 'none' }}>
-            <a
-              href={github}
-              target={'_blank'}
-              rel='noreferrer'
-              style={{ textDecoration: 'none' }}
-            >
-              <FontAwesomeIcon icon={faGithub} style={{ color: '#2c2c2c' }} />{' '}
-            </a>
-            <a
-              href={website}
-              target={'_blank'}
-              rel='noreferrer'
-              style={{ textDecoration: 'none' }}
-            >
-              <Typography>Website: {website}</Typography>
-            </a>
-          </Typography>
-        </Box>
-        <Grid
-          container
-          justifyContent={'space-evenly'}
-          sx={{ marginTop: '2rem' }}
-          padding={5}
-        >
-          <Grid item xs={12} md={5}>
-            <Typography variant='h4' sx={{ marginBottom: '5px' }}>
-              Description
-            </Typography>
-            <Typography>{description}</Typography> <br />
-            <Typography variant='h4' sx={{ marginBottom: '5px' }}>
-              Key Points
-            </Typography>
+      <div className='project'>
+        <div>
+          <h1>{title}</h1>
+        </div>
+        <div className='project-links'>
+          <a
+            href={github}
+            target={'_blank'}
+            rel='noreferrer'
+            style={{ textDecoration: 'none' }}
+          >
+            <h2>
+              <FontAwesomeIcon
+                icon={faGithub}
+                style={{ color: 'white' }}
+                size='xl'
+              />{' '}
+            </h2>
+          </a>
+          <a
+            href={website}
+            target={'_blank'}
+            rel='noreferrer'
+            style={{ textDecoration: 'none' }}
+          >
+            <button>Website</button>
+          </a>
+        </div>
+        <div className='project-container'>
+          <div className='project-description'>
+            <h2>Description</h2>
+            <p>{description}</p> <br />
+            <h2>Key Points</h2>
             {importantPoints.map((point, index) => {
               return (
-                <Box key={index}>
-                  <Typography>{point}</Typography>
-                  <br />
-                </Box>
+                <div key={index}>
+                  <p> - {point}</p>
+                </div>
               );
             })}
-          </Grid>
+          </div>
 
-          <Grid item xs={12} md={5}>
+          <div className='project-images'>
             {imgs.map((image, index) => (
               <img key={index} src={image} style={{ width: '100%' }} />
             ))}
-          </Grid>
-          <Grid item xs={5}></Grid>
-        </Grid>
-      </Box>
+          </div>
+        </div>
+      </div>
     </>
   );
 };

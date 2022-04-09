@@ -15,7 +15,7 @@ const About = (props) => {
               professionaly but it's something that I'm truly passionate about.
               I enjoy taking complex problems and turning them into solutions.
             </p>
-            <br />
+
             <p>
               I've been coding off and on for years, life has it's twists and
               turns which have thrown me through some loops, but I'm back and
@@ -23,7 +23,6 @@ const About = (props) => {
               have since learned React, which is where my focus is now.
             </p>
 
-            <br />
             <p>
               Born and raised in Utah, so I guess I'm your typical Utahn when I
               say that I LOVE the outdoors, I love to ski, hike, bike, climb,
