@@ -25,12 +25,7 @@ const NavItem = ({ handleUserClick, title, linkTo, value, classname }) => {
         className={classname}
         scroll={(el) => scrollWithOffset(el)}
       >
-        <li
-          className='projects-nav-item'
-          onClick={(e) => handleUserClick(e, value)}
-        >
-          {title}
-        </li>
+        <li className='projects-nav-item'>{title}</li>
       </HashLink>
     );
   }
