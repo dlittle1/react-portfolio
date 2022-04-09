@@ -51,7 +51,35 @@
   }
 
   /* NAV */
+  .projects-nav {
+    width: 100%;
+    background-color: white;
+    height: 70px;
+  }
+
   .projects-nav-items {
-    justify-content: flex-start;
+    display: none;
+  }
+
+  .projects-nav-drawer-button {
+    list-style-type: none;
+    color: #bc5980;
+    margin-top: 20px;
+  }
+
+  /* PROJECT */
+  .project-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: stretch;
+  }
+
+  .project-description {
+    width: 80%;
+  }
+
+  .project-images {
+    max-width: 90%;
+    margin-bottom: 70px;
   }
 }

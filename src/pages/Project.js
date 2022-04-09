@@ -1,24 +1,26 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import projectData from '../data/projectData';
-import { Toolbar, Tabs, Tab, Box, Typography, Grid } from '@mui/material';
-import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAddressCard } from '@fortawesome/free-regular-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import ProjectsNavbar from '../components/ProjectsNavbar';
 import '../styles/project.css';
+import Drawer from '../components/Drawer';
 
 const Project = () => {
   const params = useParams();
-
+  const [drawerIsOpen, setDrawerIsOpen] = useState(false);
   const { title, description, importantPoints, imgs, github, website } =
     projectData[params.projectId];
 
+  const handleDrawer = () => {
+    setDrawerIsOpen(!drawerIsOpen);
+  };
+
   return (
     <>
-      <ProjectsNavbar width='70%' />
-
+      <ProjectsNavbar handleDrawer={handleDrawer} />
+      <Drawer drawerIsOpen={drawerIsOpen} />
       <div className='project'>
         <div>
           <h1>{title}</h1>

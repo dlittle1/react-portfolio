@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import NavItem from './NavItem';
 import projectsData from '../data/projectData';
 import './component-styles/projectsNavbar.css';
-
-const ProjectsNavbar = (props) => {
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/pro-duotone-svg-icons';
+const ProjectsNavbar = ({ handleDrawer }) => {
   return (
     <nav className='projects-nav'>
-      <ul className='projects-nav-items' style={{ width: props.width }}>
+      <ul className='projects-nav-items'>
         <NavItem title='Home' linkTo={'/'} />
         {projectsData.map((project, index) => (
           <NavItem
@@ -16,6 +17,11 @@ const ProjectsNavbar = (props) => {
             linkTo={`/projects/${index}`}
           />
         ))}
+      </ul>
+      <ul>
+        <li className='projects-nav-drawer-button' onClick={handleDrawer}>
+          <FontAwesomeIcon icon={faBars} size='xl' />
+        </li>
       </ul>
     </nav>
   );

@@ -61,7 +61,7 @@ const Navbar = (props) => {
   return (
     <>
       <nav className='projects-nav'>
-        <ul className='projects-nav-items' style={{ width: props.width }}>
+        <ul className='nav-items' style={{ width: props.width }}>
           <NavItem
             title='Home'
             value='1'

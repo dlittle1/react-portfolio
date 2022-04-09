@@ -19,7 +19,6 @@ function App() {
               homeRefProp={homeRef}
               projectsRefProp={projectsRef}
               aboutRefProp={aboutRef}
-              width={'40%'}
             />
           }
         >
