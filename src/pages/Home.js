@@ -9,10 +9,17 @@ import { faReact } from '@fortawesome/free-brands-svg-icons';
 import { faJsSquare } from '@fortawesome/free-brands-svg-icons';
 import { faHtml5 } from '@fortawesome/free-brands-svg-icons';
 import ReactTooltip from 'react-tooltip';
+import { HashLink } from 'react-router-hash-link';
 
 const Home = (props) => {
   const handleClick = () => {
     props.projectsRef.current.scrollIntoView();
+  };
+
+  const scrollWithOffset = (el) => {
+    const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+    const yOffset = -90;
+    window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' });
   };
 
   return (
@@ -29,9 +36,15 @@ const Home = (props) => {
           </div>
           <h2>A full stack web developer and designer.</h2>
 
-          <button className='home-button' onClick={handleClick}>
-            View Projects
-          </button>
+          <HashLink
+            smooth
+            to={`/#projects`}
+            scroll={(el) => scrollWithOffset(el)}
+          >
+            <button className='home-button' onClick={handleClick}>
+              View Projects
+            </button>
+          </HashLink>
           <div className='home-icons'>
             <div className='home-icon-container'>
               <FontAwesomeIcon
