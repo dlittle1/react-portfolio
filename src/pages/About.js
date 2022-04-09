@@ -6,10 +6,12 @@ const About = (props) => {
   return (
     <>
       <div id='about' className='about'>
-        <h1>Something about</h1>
-        <h1>Dylan Little</h1>
         <div className='about-container'>
           <div className='about-description'>
+            <h2>
+              Something about{' '}
+              <span className='home-title-name'>Dylan Little</span>
+            </h2>
             <p>
               I really do love to code, not only is it something that I can do
               professionaly but it's something that I'm truly passionate about.

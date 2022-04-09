@@ -1,0 +1,54 @@
+@media screen and (max-width: 700px) {
+  h1 {
+    font-size: 3.5rem !important;
+  }
+
+  /* HOME */
+  .home-title {
+    display: none;
+  }
+
+  .home-title-container {
+    text-align: center;
+  }
+
+  .home-title-container h2 {
+    font-size: 1.5rem;
+    margin: 25px 0px 30px 0px;
+  }
+
+  .home-title-hello {
+    font-size: 2.5rem !important;
+    margin: 0px 0px 0px 0px;
+  }
+
+  .home-title-mobile {
+    display: block;
+    margin-top: 30px;
+  }
+
+  .home-title-mobile h1 {
+    font-size: 3.5rem;
+    margin: 20px 0px;
+  }
+
+  /* ABOUT */
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: stretch;
+  }
+
+  .about-description {
+    width: 80%;
+  }
+
+  .about-image {
+    width: 60%;
+  }
+
+  /* NAV */
+  .projects-nav-items {
+    justify-content: flex-start;
+  }
+}

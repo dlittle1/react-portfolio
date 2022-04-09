@@ -17,6 +17,14 @@
   color: white;
 }
 
+.home-title {
+  display: block;
+}
+
+.home-title-mobile {
+  display: none;
+}
+
 .home-title-name {
   background-color: white;
   color: #bc5980;

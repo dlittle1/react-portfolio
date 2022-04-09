@@ -8,6 +8,7 @@ import { faJava } from '@fortawesome/free-brands-svg-icons';
 import { faReact } from '@fortawesome/free-brands-svg-icons';
 import { faJsSquare } from '@fortawesome/free-brands-svg-icons';
 import { faHtml5 } from '@fortawesome/free-brands-svg-icons';
+import { faStackOverflow } from '@fortawesome/free-brands-svg-icons';
 import ReactTooltip from 'react-tooltip';
 import { HashLink } from 'react-router-hash-link';
 
@@ -27,24 +28,44 @@ const Home = (props) => {
       <div id='home' ref={props.refProp}></div>
       <div>
         <div className='home-title-container'>
-          <div>
+          <div className='home-title'>
             <h1>
               <span>&#123;</span>"Hello World. I'm{' '}
               <span className='home-title-name'>Dylan Little</span>."
               <span>&#125;</span>
             </h1>
           </div>
-          <h2>A full stack web developer and designer.</h2>
-
-          <HashLink
-            smooth
-            to={`/#projects`}
-            scroll={(el) => scrollWithOffset(el)}
-          >
-            <button className='home-button' onClick={handleClick}>
-              View Projects
-            </button>
-          </HashLink>
+          <div className='home-title-mobile'>
+            <h1 className='home-title-hello'>Hello World. I'm</h1>
+            <h1>
+              <span className='home-title-name'>Dylan Little</span>
+            </h1>
+          </div>
+          <h2>A developer and designer.</h2>
+          <div className='home-button-container'>
+            <HashLink
+              smooth
+              to={`/#projects`}
+              scroll={(el) => scrollWithOffset(el)}
+            >
+              <button className='home-button' onClick={handleClick}>
+                View Projects
+              </button>
+            </HashLink>
+            <a
+              href='https://stackoverflow.com/users/4192210/dylan-little'
+              target={'_blank'}
+              rel='noreferrer'
+              style={{ textDecoration: 'none' }}
+            >
+              <button className='home-button'>
+                View my{' '}
+                <span style={{ color: 'rgb(244,129,34)' }}>
+                  <FontAwesomeIcon icon={faStackOverflow} />
+                </span>
+              </button>
+            </a>
+          </div>
           <div className='home-icons'>
             <div className='home-icon-container'>
               <FontAwesomeIcon
