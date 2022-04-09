@@ -57,14 +57,24 @@
     height: 70px;
   }
 
+  .nav-items {
+    width: 100%;
+  }
+
   .projects-nav-items {
     display: none;
+  }
+
+  .projects-nav-drawer {
+    display: block;
   }
 
   .projects-nav-drawer-button {
     list-style-type: none;
     color: #bc5980;
     margin-top: 20px;
+    display: block;
+    cursor: pointer;
   }
 
   /* PROJECT */

@@ -18,7 +18,7 @@ const ProjectsNavbar = ({ handleDrawer }) => {
           />
         ))}
       </ul>
-      <ul>
+      <ul className='projects-nav-drawer'>
         <li className='projects-nav-drawer-button' onClick={handleDrawer}>
           <FontAwesomeIcon icon={faBars} size='xl' />
         </li>

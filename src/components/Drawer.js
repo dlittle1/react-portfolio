@@ -16,7 +16,7 @@ const Drawer = ({ drawerIsOpen, handleDrawer }) => {
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [handleDrawer]);
+  }, []);
 
   if (drawerIsOpen) {
     return (
