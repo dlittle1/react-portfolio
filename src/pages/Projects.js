@@ -1,30 +1,47 @@
 import React from 'react';
-import data from '../projectData.js';
+import projectData from '../data/projectData.js';
 import { Link } from 'react-router-dom';
 import '../styles/projects.css';
+import Masonry from 'react-masonry-css';
+
 const Projects = (props) => {
-  console.log(data);
+  const breakpoints = {
+    default: 4,
+    1700: 3,
+    1500: 3,
+    1250: 2,
+    890: 2,
+    592: 1,
+  };
+
   return (
     <div className='projects'>
       <div id='projects' ref={props.refProp}>
         <h1>Projects</h1>
       </div>
-      <div className='projects-container'>
-        {data.map((project, index) => (
-          <Link to={`/projects/${index}`}>
-            <div className='projects-project-container'>
+      <Masonry
+        breakpointCols={breakpoints}
+        className='my-masonry-grid'
+        columnClassName='my-masonry-grid_column'
+      >
+        {projectData.map((project, index) => (
+          <div
+            className='projects-project-container'
+            key={project.title + index}
+          >
+            <Link to={`/projects/${index}`}>
               <div key={project.title + index}>
                 <h5>{project.title}</h5>
-                <img
-                  src={project.imgs[0]}
-                  style={{ maxWidth: '100%', float: 'right' }}
-                  alt={project.title}
-                />
               </div>
-            </div>
-          </Link>
+              <img
+                src={project.imgs[0]}
+                style={{ maxWidth: '100%', float: 'right' }}
+                alt={project.title}
+              />
+            </Link>
+          </div>
         ))}
-      </div>
+      </Masonry>
     </div>
   );
 };

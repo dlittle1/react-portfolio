@@ -1,79 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import data from '../projectData';
+import projectData from '../data/projectData';
 import { Toolbar, Tabs, Tab, Box, Typography, Grid } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAddressCard } from '@fortawesome/free-regular-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import ProjectsNavbar from '../components/ProjectsNavbar';
 
 const Project = () => {
   const params = useParams();
-  const [value, setValue] = useState('2');
+
   const { title, description, importantPoints, imgs, github, website } =
-    data[params.projectId];
-
-  const handleChange = (e, newValue) => {
-    setValue(newValue);
-  };
-
-  useEffect(() => {
-    const path = window.location.pathname;
-    if (path === '/projects/0') {
-      if (value !== '2') {
-        setValue('2');
-      }
-    } else if (path === '/projects/1') {
-      if (value !== '3') {
-        setValue('3');
-      }
-    } else if (path === '/projects/2') {
-      if (value !== '4') {
-        setValue('4');
-      }
-    } else if (path === '/projects/3') {
-      if (value !== '5') {
-        setValue('5');
-      }
-    }
-  });
+    projectData[params.projectId];
 
   return (
     <>
-      <Toolbar sx={{ zIndex: 105 }}>
-        <Tabs
-          value={value}
-          textColor='secondary'
-          onChange={handleChange}
-          TabIndicatorProps={{
-            style: {
-              display: 'none',
-            },
-          }}
-          aria-label='tabs'
-        >
-          <Tab component={Link} to={'/'} label='Home' value='1' />
-          <Tab
-            component={Link}
-            to={'/projects/0'}
-            label='Rock the Vote'
-            value='2'
-          />
-          <Tab
-            component={Link}
-            to={'/projects/1'}
-            label='Rick And Morty'
-            value='3'
-          />
-          <Tab component={Link} to={'/projects/2'} label='Quiz App' value='4' />
-          <Tab
-            component={Link}
-            to={'/projects/3'}
-            label='Sneaker-heads'
-            value='5'
-          />
-        </Tabs>
-      </Toolbar>
+      <ProjectsNavbar width='70%' />
 
       <Box>
         <Box textAlign={'center'}>
