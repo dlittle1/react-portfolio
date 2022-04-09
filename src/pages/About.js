@@ -1,21 +1,15 @@
 import React, { useRef } from 'react';
 import aboutMePhoto from '../assets/me.jpg';
-import { Box, Grid, Typography } from '@mui/material';
+import '../styles/about.css';
 
 const About = (props) => {
   return (
     <>
-      <div id='about'>
-        <Grid item xs={12} md={7} p={1} sx={{ color: 'white' }}>
-          <div>
-            <h1 ref={props.refProp}>something about</h1>
-            <h1>Dylan Little</h1>
-
-            <Box mt={5}>
-              <Typography variant='h5'>🍟 + 😴 + 💻 </Typography>
-            </Box>
-          </div>
-          <div mt={5} px={{ xs: 5, md: 10, lg: 20 }}>
+      <div id='about' className='about'>
+        <h1>Something about</h1>
+        <h1>Dylan Little</h1>
+        <div className='about-container'>
+          <div className='about-description'>
             <p>
               I really do love to code, not only is it something that I can do
               professionaly but it's something that I'm truly passionate about.
@@ -37,15 +31,14 @@ const About = (props) => {
             </p>
             <div id='about'></div>
           </div>
-        </Grid>
-        <Grid item xs={5} md={3} mt={5}>
-          <Box>
+          <div className='about-image'>
             <img
               src={aboutMePhoto}
               style={{ maxWidth: '100%', borderRadius: '1rem' }}
+              alt={'Dylan Little'}
             />
-          </Box>
-        </Grid>
+          </div>
+        </div>
       </div>
     </>
   );
