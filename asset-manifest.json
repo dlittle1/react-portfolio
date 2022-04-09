@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.d3e918e1.css",
-    "main.js": "/static/js/main.d6482fe9.js",
+    "main.css": "/static/css/main.57e9710c.css",
+    "main.js": "/static/js/main.73a3cd10.js",
     "static/media/sneakerheads2.png": "/static/media/sneakerheads2.03be55b932f6032820ab.png",
     "static/media/RTV2.png": "/static/media/RTV2.869e00d1c2be9a072a6c.png",
     "static/media/sneaker-heads-landing.png": "/static/media/sneaker-heads-landing.8c4222cf96a812065da3.png",
@@ -12,11 +12,11 @@
     "static/media/RickAndMortyCharacter.PNG": "/static/media/RickAndMortyCharacter.17996135048ba282346c.PNG",
     "static/media/me.jpg": "/static/media/me.1012f9cbb5c934d62093.jpg",
     "index.html": "/index.html",
-    "main.d3e918e1.css.map": "/static/css/main.d3e918e1.css.map",
-    "main.d6482fe9.js.map": "/static/js/main.d6482fe9.js.map"
+    "main.57e9710c.css.map": "/static/css/main.57e9710c.css.map",
+    "main.73a3cd10.js.map": "/static/js/main.73a3cd10.js.map"
   },
   "entrypoints": [
-    "static/css/main.d3e918e1.css",
-    "static/js/main.d6482fe9.js"
+    "static/css/main.57e9710c.css",
+    "static/js/main.73a3cd10.js"
   ]
 }
