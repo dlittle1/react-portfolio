@@ -5,16 +5,10 @@ import { Box, Grid, Typography } from '@mui/material';
 const About = (props) => {
   return (
     <>
-      <Grid
-        container
-        justifyContent={'space-evenly'}
-        pt={{ xs: 20, md: 5 }}
-        pb={20}
-      >
-        <Box ref={props.refProp}></Box>
+      <div id='about'>
         <Grid item xs={12} md={7} p={1} sx={{ color: 'white' }}>
-          <div textAlign={'center'}>
-            <h1>something about</h1>
+          <div>
+            <h1 ref={props.refProp}>something about</h1>
             <h1>Dylan Little</h1>
 
             <Box mt={5}>
@@ -52,7 +46,7 @@ const About = (props) => {
             />
           </Box>
         </Grid>
-      </Grid>
+      </div>
     </>
   );
 };
