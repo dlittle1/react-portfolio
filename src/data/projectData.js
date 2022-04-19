@@ -2,12 +2,29 @@ import rickAndMortyHome from '../assets/projectScreenshots/RickAndMortyHome.PNG'
 import rickAndMortyCharacter from '../assets/projectScreenshots/RickAndMortyCharacter.PNG';
 import quizApp from '../assets/projectScreenshots/QuizApp.PNG';
 import quizAppEndScreen from '../assets/projectScreenshots/QuizAppEndScreen.PNG';
-import sneakerHeadsLanding from '../assets/projectScreenshots/sneaker-heads-landing.png';
-import sneakerheads2 from '../assets/projectScreenshots/sneakerheads2.png';
+import sneakerHeadsLanding from '../assets/projectScreenshots/sneakerHeadsLanding.png';
+import sneakerheads2 from '../assets/projectScreenshots/sneakerHeads2.png';
+import sneakerheads1 from '../assets/projectScreenshots/sneakerHeads1.png';
 import RTV1 from '../assets/projectScreenshots/RTV1.png';
 import RTV2 from '../assets/projectScreenshots/RTV2.png';
 
 const projectData = [
+  {
+    title: 'Sneaker Heads',
+    description:
+      "Sneaker Heads is an online social media platform for those that love shoes. It's a place where people can go to share pics of their favorite shoes. They can like other shoes, comment on other shoes, they can create update and delete their own shoes. All of these are stored using MongoDB, the server is run on Node.JS and Express.",
+    importantPoints: [
+      'Created an API specifically for the shoes.',
+      'Used Mongoose to create a schema for the shoes.',
+      'Implemented Redux to manage global state of the application.',
+      'Redux was used to Asynchronously fetch data from the database.',
+      'Mobile responsive and has a clean and simple design.',
+      'MongoDB was used to hold the information: shoes, comments, likes, image urls, etc.',
+    ],
+    imgs: [sneakerheads1, sneakerHeadsLanding, sneakerheads2],
+    github: 'https://github.com/dlittle1/sneaker-heads',
+    website: 'https://sneaker-heads1.herokuapp.com/',
+  },
   {
     title: 'Rock the Vote',
     description:
@@ -18,8 +35,10 @@ const projectData = [
       'Posts can be sorted by new, popularity, tags, current user likes, and current user posts.',
       'Users can comment on posts.',
       'App is secure, with hashing of passwords, authentication and authorization.',
+      'Users can create an account and login.',
+      'Mobile-friendly design.',
     ],
-    imgs: [RTV2, RTV1],
+    imgs: [RTV1, RTV2],
     github: 'https://github.com/dlittle1/political-issue-project',
     website: 'https://rock-the-vote1.herokuapp.com/',
   },
@@ -32,34 +51,25 @@ const projectData = [
       'Implemented Infinite Scroll functionality into character list, and location list.',
       'Used Lodash and debounce to ensure Infinite scroll was not called more than once at a time.',
       'Cleaned the requested wiki HTML data to ensure that no Cross Site Scripting attacks could be made.',
+      'Used React Router to navigate between pages.',
+      'Mobile friendly and responsive.',
     ],
     imgs: [rickAndMortyHome, rickAndMortyCharacter],
     github: 'https://github.com/dlittle1/RickAndMortyUniverse',
     website: 'http://dlittle1.github.io/RickAndMortyUniverse',
   },
-  {
-    title: 'Sneaker Heads',
-    description:
-      "Sneaker Heads is an online social media platform for those that love shoes. It's a place where people can go to share pics of their favorite shoes. They can like other shoes, comment on other shoes, they can create update and delete their own shoes. All of these are stored using MongoDB, the server is run on Node.JS and Express.",
-    importantPoints: [
-      'Created an API specifically for the shoes.',
-      'MongoDB was used to hold the information: shoes, comments, likes, image urls, etc.',
-    ],
-    imgs: [sneakerHeadsLanding, sneakerheads2],
-    github: 'https://github.com/dlittle1/sneaker-heads',
-    website: 'https://sneaker-heads1.herokuapp.com/',
-  },
-  {
-    title: 'Quiz App',
-    description:
-      'An app made from information pulled from opentdb.com which is an api for quizes. It provides categories, difficulty, multiple choice, true/false, and an amount of questions up to 50. I used this api to create a website that pretty much put those things together, so that a user could choose from those choices and would then be given however many questions that they chose with the correct filters. The app would then display how well they did in the end.',
-    importantPoints: [
-      'implemented the use of axios for making API calls.',
-      'used context to deliver the choices made by the user to the question component.',
-    ],
-    imgs: [quizApp, quizAppEndScreen],
-    github: 'https://github.com/dlittle1/Quiz-App',
-    website: 'http://dlittle1.github.io/Quiz-App',
-  },
+
+  // {
+  //   title: 'Quiz App',
+  //   description:
+  //     'An app made from information pulled from opentdb.com which is an api for quizes. It provides categories, difficulty, multiple choice, true/false, and an amount of questions up to 50. I used this api to create a website that pretty much put those things together, so that a user could choose from those choices and would then be given however many questions that they chose with the correct filters. The app would then display how well they did in the end.',
+  //   importantPoints: [
+  //     'implemented the use of axios for making API calls.',
+  //     'used context to deliver the choices made by the user to the question component.',
+  //   ],
+  //   imgs: [quizApp, quizAppEndScreen],
+  //   github: 'https://github.com/dlittle1/Quiz-App',
+  //   website: 'http://dlittle1.github.io/Quiz-App',
+  // },
 ];
 export default projectData;
