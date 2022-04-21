@@ -37,7 +37,7 @@ const Home = (props) => {
     },
     {
       name: 'Resume',
-      link: 'https://github.com/dlittle1/resume/raw/main/Dylan%20Resume%20v3%20.pdf',
+      link: 'https://dlittle1.github.io/resume/',
       icon: faFileAlt,
       tooltip: 'Resume',
     },
