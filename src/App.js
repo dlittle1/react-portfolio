@@ -24,7 +24,7 @@ function App() {
           }
         >
           <Route
-            path='/'
+            path=''
             element={
               <>
                 <Home refProp={homeRef} projectsRef={projectsRef} />
