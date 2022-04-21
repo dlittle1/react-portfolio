@@ -1,86 +1,13 @@
 import React from 'react';
 import '../styles/home.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCss3Alt } from '@fortawesome/free-brands-svg-icons';
-import { faGit } from '@fortawesome/free-brands-svg-icons';
-import { faNode } from '@fortawesome/free-brands-svg-icons';
-import { faJava } from '@fortawesome/free-brands-svg-icons';
-import { faReact } from '@fortawesome/free-brands-svg-icons';
-import { faJsSquare } from '@fortawesome/free-brands-svg-icons';
-import { faHtml5 } from '@fortawesome/free-brands-svg-icons';
-import { faStackOverflow } from '@fortawesome/free-brands-svg-icons';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faFileAlt } from '@fortawesome/free-solid-svg-icons';
+
 import ReactTooltip from 'react-tooltip';
 import { HashLink } from 'react-router-hash-link';
+import socialLinks from '../data/socialLinks';
+import DevIcons from '../components/DevIcons';
 
 const Home = (props) => {
-  const buttonLinks = [
-    {
-      name: 'Github',
-      link: 'https://github.com/dlittle1',
-      icon: faGithub,
-      tooltip: 'Github',
-    },
-    {
-      name: 'LinkedIn',
-      link: 'https://www.linkedin.com/in/dylanlittle/',
-      icon: faLinkedin,
-      tooltip: 'LinkedIn',
-    },
-    {
-      name: 'Stack Overflow',
-      link: 'https://stackoverflow.com/users/4192210/dylan-little',
-      icon: faStackOverflow,
-      tooltip: 'Stack Overflow',
-    },
-    {
-      name: 'Resume',
-      link: 'https://dlittle1.github.io/resume/',
-      icon: faFileAlt,
-      tooltip: 'Resume',
-    },
-  ];
-
-  const homeIcons = [
-    {
-      name: 'CSS3',
-      icon: faCss3Alt,
-      tooltip: 'CSS3',
-    },
-    {
-      name: 'HTML5',
-      icon: faHtml5,
-      tooltip: 'HTML5',
-    },
-    {
-      name: 'JavaScript',
-      icon: faJsSquare,
-      tooltip: 'JavaScript',
-    },
-    {
-      name: 'React',
-      icon: faReact,
-      tooltip: 'React',
-    },
-    {
-      name: 'Node',
-      icon: faNode,
-      tooltip: 'Node.js',
-    },
-    {
-      name: 'Git',
-      icon: faGit,
-      tooltip: 'Git',
-    },
-    {
-      name: 'Java',
-      icon: faJava,
-      tooltip: 'Java',
-    },
-  ];
-
   const handleClick = () => {
     props.projectsRef.current.scrollIntoView();
   };
@@ -121,7 +48,7 @@ const Home = (props) => {
             </HashLink>
 
             <div className='home-button-links'>
-              {buttonLinks.map((button, index) => (
+              {socialLinks.map((button, index) => (
                 <a
                   key={button.name + index}
                   href={button.link}
@@ -148,26 +75,7 @@ const Home = (props) => {
               ))}
             </div>
           </div>
-          <div className='home-icons'>
-            {homeIcons.map((icon, index) => (
-              <div key={icon.name + index} className='home-icon-container'>
-                <FontAwesomeIcon
-                  icon={icon.icon}
-                  data-tip
-                  data-for={icon.tooltip}
-                  size='3x'
-                />
-                <ReactTooltip
-                  id={icon.tooltip}
-                  place='top'
-                  type='dark'
-                  effect='float'
-                >
-                  {icon.tooltip}
-                </ReactTooltip>
-              </div>
-            ))}
-          </div>
+          <DevIcons />
         </div>
       </div>
     </div>

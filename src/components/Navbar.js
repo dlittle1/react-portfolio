@@ -10,35 +10,9 @@ import {
 import { faFileAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ReactTooltip from 'react-tooltip';
+import socialNavLinks from '../data/socialLinks';
 const Navbar = (props) => {
   const [value, setValue] = useState('1');
-
-  const socialNavLinks = [
-    {
-      name: 'Github',
-      link: 'https://github.com/dlittle1',
-      icon: faGithub,
-      tooltip: 'Github',
-    },
-    {
-      name: 'LinkedIn',
-      link: 'https://www.linkedin.com/in/dylanlittle/',
-      icon: faLinkedin,
-      tooltip: 'LinkedIn',
-    },
-    {
-      name: 'Stack Overflow',
-      link: 'https://stackoverflow.com/users/4192210/dylan-little',
-      icon: faStackOverflow,
-      tooltip: 'Stack Overflow',
-    },
-    {
-      name: 'Resume',
-      link: 'https://dlittle1.github.io/resume/',
-      icon: faFileAlt,
-      tooltip: 'Resume',
-    },
-  ];
 
   return (
     <>
