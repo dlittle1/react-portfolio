@@ -11,8 +11,9 @@
   .home-title-container {
     text-align: center;
     width: 100%;
-    position: relative;
     height: 85vh;
+    justify-content: space-around;
+    margin: 0;
   }
 
   .home-title-container h2 {
@@ -34,6 +35,10 @@
   .home-title-mobile h1 {
     font-size: 3.5rem;
     margin: 20px 0px;
+  }
+
+  .home-button-links {
+    display: block;
   }
 
   /* ABOUT */
@@ -68,6 +73,9 @@
 
   .nav-links-main {
     justify-content: space-around;
+    align-items: center;
+    width: auto;
+    gap: 20px;
   }
 
   .projects-nav-items {
