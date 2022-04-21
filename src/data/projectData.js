@@ -1,12 +1,10 @@
-import rickAndMortyHome from '../assets/projectScreenshots/RickAndMortyHome.PNG';
-import rickAndMortyCharacter from '../assets/projectScreenshots/RickAndMortyCharacter.PNG';
-import quizApp from '../assets/projectScreenshots/QuizApp.PNG';
-import quizAppEndScreen from '../assets/projectScreenshots/QuizAppEndScreen.PNG';
-import sneakerHeadsLanding from '../assets/projectScreenshots/sneakerHeadsLanding.png';
-import sneakerheads2 from '../assets/projectScreenshots/sneakerHeads2.png';
-import sneakerheads1 from '../assets/projectScreenshots/sneakerHeads1.png';
-import RTV1 from '../assets/projectScreenshots/RTV1.png';
-import RTV2 from '../assets/projectScreenshots/RTV2.png';
+import rickAndMortyHome from '../assets/RickAndMortyHome.PNG';
+import rickAndMortyCharacter from '../assets/RickAndMortyCharacter.PNG';
+import sneakerHeadsLanding from '../assets/sneakerHeadsLanding.png';
+import sneakerheads2 from '../assets/sneakerHeads2.png';
+import sneakerheads1 from '../assets/sneakerHeads1.png';
+import RTV1 from '../assets/RTV1.png';
+import RTV2 from '../assets/RTV2.png';
 
 const projectData = [
   {
