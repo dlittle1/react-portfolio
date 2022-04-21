@@ -2,6 +2,14 @@
   position: relative;
 }
 
+.projects-heading p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 10px;
+  text-align: center;
+  color: white;
+}
+
 .my-masonry-grid {
   display: -webkit-box; /* Not needed if autoprefixing */
   display: -ms-flexbox; /* Not needed if autoprefixing */

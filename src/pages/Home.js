@@ -9,10 +9,78 @@ import { faReact } from '@fortawesome/free-brands-svg-icons';
 import { faJsSquare } from '@fortawesome/free-brands-svg-icons';
 import { faHtml5 } from '@fortawesome/free-brands-svg-icons';
 import { faStackOverflow } from '@fortawesome/free-brands-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faFileAlt } from '@fortawesome/free-solid-svg-icons';
 import ReactTooltip from 'react-tooltip';
 import { HashLink } from 'react-router-hash-link';
 
 const Home = (props) => {
+  const buttonLinks = [
+    {
+      name: 'Github',
+      link: 'https://github.com/dlittle1',
+      icon: faGithub,
+      tooltip: 'Github',
+    },
+    {
+      name: 'LinkedIn',
+      link: 'https://www.linkedin.com/in/dylanlittle/',
+      icon: faLinkedin,
+      tooltip: 'LinkedIn',
+    },
+    {
+      name: 'Stack Overflow',
+      link: 'https://stackoverflow.com/users/4192210/dylan-little',
+      icon: faStackOverflow,
+      tooltip: 'Stack Overflow',
+    },
+    {
+      name: 'Resume',
+      link: 'https://github.com/dlittle1/resume/raw/main/Dylan%20Resume%20v3%20.pdf',
+      icon: faFileAlt,
+      tooltip: 'Resume',
+    },
+  ];
+
+  const homeIcons = [
+    {
+      name: 'CSS3',
+      icon: faCss3Alt,
+      tooltip: 'CSS3',
+    },
+    {
+      name: 'HTML5',
+      icon: faHtml5,
+      tooltip: 'HTML5',
+    },
+    {
+      name: 'JavaScript',
+      icon: faJsSquare,
+      tooltip: 'JavaScript',
+    },
+    {
+      name: 'React',
+      icon: faReact,
+      tooltip: 'React',
+    },
+    {
+      name: 'Node',
+      icon: faNode,
+      tooltip: 'Node.js',
+    },
+    {
+      name: 'Git',
+      icon: faGit,
+      tooltip: 'Git',
+    },
+    {
+      name: 'Java',
+      icon: faJava,
+      tooltip: 'Java',
+    },
+  ];
+
   const handleClick = () => {
     props.projectsRef.current.scrollIntoView();
   };
@@ -52,118 +120,54 @@ const Home = (props) => {
                 View Projects
               </button>
             </HashLink>
-            <a
-              href='https://stackoverflow.com/users/4192210/dylan-little'
-              target={'_blank'}
-              rel='noreferrer'
-              style={{ textDecoration: 'none' }}
-            >
-              <button className='home-button'>
-                View my{' '}
-                <span style={{ color: 'rgb(244,129,34)' }}>
-                  <FontAwesomeIcon icon={faStackOverflow} />
-                </span>
-              </button>
-            </a>
+
+            <div className='home-button-links'>
+              {buttonLinks.map((button, index) => (
+                <a
+                  key={button.name + index}
+                  href={button.link}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  <button className='home-button-link'>
+                    <FontAwesomeIcon
+                      icon={button.icon}
+                      data-tip
+                      data-for={button.tooltip}
+                      size='3x'
+                    />
+                    <ReactTooltip
+                      id={button.tooltip}
+                      place='bottom'
+                      type='dark'
+                      effect='float'
+                    >
+                      {button.tooltip}
+                    </ReactTooltip>
+                  </button>
+                </a>
+              ))}
+            </div>
           </div>
           <div className='home-icons'>
-            <div className='home-icon-container'>
-              <FontAwesomeIcon
-                icon={faGit}
-                size='3x'
-                data-tip
-                data-for='gitIcon'
-              />
-              <ReactTooltip id='gitIcon' place='top' type='dark' effect='float'>
-                <p>Git</p>
-              </ReactTooltip>
-            </div>
-            <div className='home-icon-container'>
-              <FontAwesomeIcon
-                icon={faJava}
-                size='3x'
-                data-tip
-                data-for='javaIcon'
-              />
-              <ReactTooltip
-                id='javaIcon'
-                place='top'
-                type='dark'
-                effect='float'
-              >
-                <p>Java</p>
-              </ReactTooltip>
-            </div>
-            <div className='home-icon-container'>
-              <FontAwesomeIcon
-                icon={faReact}
-                size='3x'
-                data-tip
-                data-for='reactIcon'
-              />
-              <ReactTooltip
-                id='reactIcon'
-                place='top'
-                type='dark'
-                effect='float'
-              >
-                <p>React</p>
-              </ReactTooltip>
-            </div>
-            <div className='home-icon-container'>
-              <FontAwesomeIcon
-                icon={faNode}
-                size='3x'
-                data-tip
-                data-for='nodeIcon'
-              />
-              <ReactTooltip
-                id='nodeIcon'
-                place='top'
-                type='dark'
-                effect='float'
-              >
-                <p>Node.js</p>
-              </ReactTooltip>
-            </div>
-            <div className='home-icon-container'>
-              <FontAwesomeIcon
-                icon={faJsSquare}
-                size='3x'
-                data-tip
-                data-for='jsIcon'
-              />
-              <ReactTooltip id='jsIcon' place='top' type='dark' effect='float'>
-                <p>JavaScript</p>
-              </ReactTooltip>
-            </div>
-            <div className='home-icon-container'>
-              <FontAwesomeIcon
-                icon={faHtml5}
-                size='3x'
-                data-tip
-                data-for='htmlIcon'
-              />
-              <ReactTooltip
-                id='htmlIcon'
-                place='top'
-                type='dark'
-                effect='float'
-              >
-                <p>HTML</p>
-              </ReactTooltip>
-            </div>
-            <div className='home-icon-container'>
-              <FontAwesomeIcon
-                icon={faCss3Alt}
-                size='3x'
-                data-tip
-                data-for='cssIcon'
-              />
-              <ReactTooltip id='cssIcon' place='top' type='dark' effect='float'>
-                <p>CSS</p>
-              </ReactTooltip>
-            </div>
+            {homeIcons.map((icon, index) => (
+              <div key={icon.name + index} className='home-icon-container'>
+                <FontAwesomeIcon
+                  icon={icon.icon}
+                  data-tip
+                  data-for={icon.tooltip}
+                  size='3x'
+                />
+                <ReactTooltip
+                  id={icon.tooltip}
+                  place='top'
+                  type='dark'
+                  effect='float'
+                >
+                  {icon.tooltip}
+                </ReactTooltip>
+              </div>
+            ))}
           </div>
         </div>
       </div>

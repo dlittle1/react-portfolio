@@ -16,8 +16,9 @@ const Projects = (props) => {
 
   return (
     <div className='projects'>
-      <div id='projects' ref={props.refProp}>
+      <div id='projects' className='projects-heading' ref={props.refProp}>
         <h1>Projects</h1>
+        <p>(click project for more info)</p>
       </div>
       <Masonry
         breakpointCols={breakpoints}

@@ -10,6 +10,9 @@
 
   .home-title-container {
     text-align: center;
+    width: 100%;
+    position: relative;
+    height: 85vh;
   }
 
   .home-title-container h2 {
@@ -25,6 +28,7 @@
   .home-title-mobile {
     display: block;
     margin-top: 30px;
+    width: 100%;
   }
 
   .home-title-mobile h1 {
@@ -59,6 +63,11 @@
 
   .nav-items {
     width: 100%;
+    padding: 0;
+  }
+
+  .nav-links-main {
+    justify-content: space-around;
   }
 
   .projects-nav-items {
@@ -77,6 +86,10 @@
     cursor: pointer;
   }
 
+  .nav-links-social {
+    display: none;
+  }
+
   /* PROJECT */
   .project-container {
     flex-direction: column;
@@ -91,5 +104,9 @@
   .project-images {
     max-width: 90%;
     margin-bottom: 70px;
+  }
+
+  .home-icons {
+    display: none;
   }
 }

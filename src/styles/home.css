@@ -15,6 +15,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+  margin-top: 50px;
 }
 
 .home-title {
@@ -30,6 +31,13 @@
   color: #bc5980;
   padding: 10px 5px;
   border-radius: 0.5rem;
+}
+
+.home-button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .home-button {
@@ -51,11 +59,37 @@
   border: 1px solid white;
 }
 
+.home-button-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 20px;
+}
+
+.home-button-link {
+  border: none;
+  background-color: #bc5980;
+
+  color: white;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.home-button-link:hover {
+  background-color: #bc5980;
+  color: white;
+  border-radius: 0;
+}
+
 .home-icons {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   width: 100%;
+  margin-top: 60px;
   padding: 40px 0px;
 }
 
