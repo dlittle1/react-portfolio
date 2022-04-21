@@ -5,14 +5,14 @@ import About from './pages/About';
 import { useRef } from 'react';
 import Project from './pages/Project';
 import Resume from './pages/Resume';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import './styles/mobile.css';
 function App() {
   const homeRef = useRef(null);
   const projectsRef = useRef(null);
   const aboutRef = useRef(null);
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route
           element={
@@ -37,7 +37,7 @@ function App() {
         <Route path='/projects/:projectId' element={<Project />} />
         <Route path='/resume' element={<Resume />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
