@@ -7,8 +7,9 @@ import {
   faLinkedin,
   faStackOverflow,
 } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFileAlt } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import ReactTooltip from 'react-tooltip';
 const Navbar = (props) => {
   const [value, setValue] = useState('1');
 
@@ -72,7 +73,20 @@ const Navbar = (props) => {
                   rel='noopener noreferrer'
                   className='social-nav-item'
                 >
-                  <FontAwesomeIcon icon={link.icon} size='2x' />
+                  <FontAwesomeIcon
+                    data-tip
+                    data-for={link.tooltip}
+                    icon={link.icon}
+                    size='2x'
+                  />
+                  <ReactTooltip
+                    id={link.tooltip}
+                    place='bottom'
+                    type='dark'
+                    effect='solid'
+                  >
+                    {link.tooltip}
+                  </ReactTooltip>
                 </a>
               </li>
             ))}
