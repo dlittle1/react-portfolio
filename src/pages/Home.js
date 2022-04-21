@@ -115,10 +115,9 @@ const Home = (props) => {
               smooth
               to={`/#projects`}
               scroll={(el) => scrollWithOffset(el)}
+              className='home-button'
             >
-              <button className='home-button' onClick={handleClick}>
-                View Projects
-              </button>
+              View Projects
             </HashLink>
 
             <div className='home-button-links'>
