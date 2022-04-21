@@ -4,6 +4,7 @@ import Projects from './pages/Projects';
 import About from './pages/About';
 import { useRef } from 'react';
 import Project from './pages/Project';
+import Resume from './pages/Resume';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './styles/mobile.css';
 function App() {
@@ -34,6 +35,7 @@ function App() {
           />
         </Route>
         <Route path='/projects/:projectId' element={<Project />} />
+        <Route path='/resume' element={<Resume />} />
       </Routes>
     </BrowserRouter>
   );
