@@ -65,7 +65,12 @@ const Project = () => {
 
           <div className='project-images'>
             {imgs.map((image, index) => (
-              <img key={index} src={image} style={{ width: '100%' }} />
+              <img
+                alt={`${title} screenshot #${index + 1} `}
+                key={index}
+                src={image}
+                style={{ width: '100%' }}
+              />
             ))}
           </div>
         </div>
