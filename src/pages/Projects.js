@@ -14,6 +14,12 @@ const Projects = (props) => {
     592: 1,
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+    });
+  };
+
   return (
     <div className='projects'>
       <div id='projects' className='projects-heading' ref={props.refProp}>
@@ -30,7 +36,7 @@ const Projects = (props) => {
             className='projects-project-container'
             key={project.title + index}
           >
-            <Link to={`/projects/${index}`}>
+            <Link to={`/projects/${index}`} onClick={scrollToTop}>
               <div key={project.title + index}>
                 <h5>{project.title}</h5>
               </div>
