@@ -1,6 +1,9 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
-  box-sizing: border-box;
   animation: gradient 8s ease infinite;
   background: linear-gradient(
     to bottom right,
