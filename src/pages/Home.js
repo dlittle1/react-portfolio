@@ -1,17 +1,12 @@
 import React from 'react';
 import '../styles/home.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 import ReactTooltip from 'react-tooltip';
 import { HashLink } from 'react-router-hash-link';
 import socialLinks from '../data/socialLinks';
 import DevIcons from '../components/DevIcons';
 
 const Home = (props) => {
-  const handleClick = () => {
-    props.projectsRef.current.scrollIntoView();
-  };
-
   const scrollWithOffset = (el) => {
     const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
     const yOffset = -90;
