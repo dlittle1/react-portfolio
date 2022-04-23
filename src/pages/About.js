@@ -13,18 +13,35 @@ const About = (props) => {
               <span className='home-title-name'>Dylan Little</span>
             </h2>
             <p>
-              I really do love to code, not only is it something that I can do
-              professionaly but it's something that I'm truly passionate about.
-              I enjoy taking complex problems and turning them into solutions.
+              It all started when I was a college student studying
+              communications of all things, I love marketing, and I love design,
+              so I thought I could make a career of mixing the two with a
+              communications degree. While in a design class we had to make an
+              html 'portfolio' which was just a couple of paragraphs about what
+              we are interested in. After writing just a few lines of code I was
+              hooked!
+            </p>
+            <p>
+              Coding is who I am at my core, I love solving puzzles, I love
+              design, and I love creating things for other people to enjoy.
             </p>
 
             <p>
-              I've been coding off and on for years, life has it's twists and
-              turns which have thrown me through some loops, but I'm back and
-              here to stay. I started in Ruby on Rails, some c++, and c#, but
-              have since learned React, which is where my focus is now.
+              Full stack for me is where it's at, I can get into the meat of the
+              app by designing the who, what, and how of backend design, then I
+              get to move into the creative design aspects of frontend
+              development. Seeing a page flourish from backend to frontend, and
+              eventually become a published application that other users can
+              access, excites me to no end.
             </p>
-
+            <p>
+              Right now I'm in find all, eat all mode. I can research and play
+              with development technologies for hours and hours. I've recently
+              been focusing on React, MongoDB, Express, Node.js, Redux,
+              TypeScript, JavaScript, HTML, CSS. In the past I have used Ruby,
+              Ruby on Rails, Bootstrap, C#, and Java, although It's been quite
+              some time.
+            </p>
             <p>
               Born and raised in Utah, so I guess I'm your typical Utahn when I
               say that I LOVE the outdoors, I love to ski, hike, bike, climb,
