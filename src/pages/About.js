@@ -22,6 +22,14 @@ const About = (props) => {
               hooked!
             </p>
             <p>
+              Then came code academy, and youtube videos, and constant stack
+              overflow, but by the end of the semester I had a fully functioning
+              'tinder for groups' app, where groups could find other groups to
+              hang out with. Not only that but users could friend other users,
+              create posts, like posts, etc. I was blown away by what I could do
+              with just a little bit of code.
+            </p>
+            <p>
               Coding is who I am at my core, I love solving puzzles, I love
               design, and I love creating things for other people to enjoy.
             </p>
@@ -45,7 +53,8 @@ const About = (props) => {
             <p>
               Born and raised in Utah, so I guess I'm your typical Utahn when I
               say that I LOVE the outdoors, I love to ski, hike, bike, climb,
-              fish, really anything outside, I love to do it!
+              fish, really anything outside. I love to travel, I love to see the
+              world, and I love to meet new people.
             </p>
             <div id='about'></div>
           </div>
