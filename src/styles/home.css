@@ -42,7 +42,7 @@
     linear-gradient(
       to bottom right,
       #bd5a80,
-      #c06f8e,
+      #bd5a80,
       #bd5a80,
       #7a4d7b,
       #bd5a80
@@ -51,6 +51,12 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin: 0;
+}
+
+.home-title-subtitle {
+  font-size: 3rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 @keyframes gradient {
