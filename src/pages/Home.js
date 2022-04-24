@@ -35,9 +35,10 @@ const Home = (props) => {
               <h1>Dylan Little</h1>
             </div>
           </div>
-          <h2 className='home-title-subtitle'>
-            &#47;* A developer and designer. *&#47;
-          </h2>
+          <div className='home-title-subtitle'>
+            <h2>&#47;* A developer and designer. *&#47;</h2>
+          </div>
+
           <div className='home-button-container'>
             <HashLink
               smooth

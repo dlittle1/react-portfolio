@@ -25,20 +25,6 @@
   animation: fadeInFromLeftAndSmash 1s ease-in-out;
 }
 
-.home-title::after {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.home-title-mobile {
-  display: none;
-}
-
 @keyframes fadeInFromLeftAndSmash {
   0% {
     opacity: 0;
@@ -59,6 +45,10 @@
     transform: scale(1);
     transform: translateX(0);
   }
+}
+
+.home-title-mobile {
+  display: none;
 }
 
 .home-title-name {
@@ -98,10 +88,49 @@
   }
 }
 
-.home-title-subtitle {
-  font-size: 3rem;
+h2 {
+  position: relative;
+  font-size: 2.5rem;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.9);
+  overflow: hidden;
+  white-space: nowrap;
+  letter-spacing: 0.15em;
+  border-right: 0.15em solid rgba(255, 255, 255, 0.9);
+  animation: typing 3.5s steps(40, end) 1s, opacity 1.2s,
+    blink 0.75s step-end infinite;
+  width: auto;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
 }
 
 .home-button-container {
