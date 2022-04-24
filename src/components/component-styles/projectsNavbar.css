@@ -3,10 +3,11 @@
   overflow: hidden;
   position: fixed;
   top: 0;
-  width: 100%;
+  width: calc(100% - 60px);
   z-index: 100;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
   border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
 }
 
 .projects-nav-items {
@@ -29,10 +30,10 @@
 }
 
 .projects-nav-item {
-  margin: 20px;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
+  padding: 20px;
 }
 
 .projects-nav-item:hover {
@@ -40,7 +41,6 @@
   color: #ffffff;
   cursor: pointer;
   margin: 0;
-  padding: 20px;
 }
 
 .projects-nav-items .active {
