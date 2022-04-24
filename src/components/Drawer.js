@@ -6,31 +6,19 @@ import projectData from '../data/projectData';
 const Drawer = ({ drawerIsOpen, handleDrawer, drawerButtonRef }) => {
   const drawerRef = useRef(null);
 
-  function handleClickOutside(event) {
-    if (drawerRef.current.contains(event.target)) {
-    } else {
-      console.log(handleDrawer);
-      handleDrawer();
-    }
-
-    if (
-      drawerRef.current &&
-      !drawerRef.current.contains(event.target) &&
-      drawerButtonRef.current &&
-      !drawerButtonRef.current.contains(event.target)
-    ) {
-      handleDrawer();
-    }
-  }
-
   useEffect(() => {
+    function handleClickOutside(event) {
+      if (drawerRef.current && !drawerRef.current.contains(event.target)) {
+        handleDrawer();
+      }
+    }
     document.addEventListener('mousedown', handleClickOutside);
     document.addEventListener('touchstart', handleClickOutside);
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
       document.removeEventListener('touchstart', handleClickOutside);
     };
-  }, []);
+  }, [drawerIsOpen, drawerButtonRef, handleDrawer]);
 
   if (drawerIsOpen) {
     return (

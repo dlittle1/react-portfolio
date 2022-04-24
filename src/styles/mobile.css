@@ -116,11 +116,11 @@
   }
 
   .project-description {
-    width: 95%;
+    width: 100%;
   }
 
   .project-images {
-    max-width: 90%;
+    max-width: 100%;
     margin-bottom: 70px;
   }
 
