@@ -104,6 +104,11 @@
     width: 60%;
   }
 
+  /* DRAWER */
+  .drawer {
+    display: block;
+  }
+
   /* PROJECT */
   .project {
     margin-top: 50px;

@@ -24,25 +24,25 @@ const Drawer = ({ drawerIsOpen, handleDrawer, drawerButtonRef }) => {
     };
   }, [drawerIsOpen, drawerButtonRef, handleDrawer]);
 
-  if (drawerIsOpen) {
-    return (
-      <div className='drawer' ref={drawerRef}>
-        <ul>
-          <NavItem title='Home' linkTo={'/'} />
-          {projectData.map((project, index) => (
-            <NavItem
-              key={project.title + index}
-              title={project.title}
-              index={index}
-              linkTo={`/projects/${index}`}
-            />
-          ))}
-        </ul>
-      </div>
-    );
-  } else {
-    return null;
-  }
+  const drawerStyles = drawerIsOpen
+    ? { transform: 'translateX(0)' }
+    : { transform: 'translateX(-200px)' };
+
+  return (
+    <div className='drawer' ref={drawerRef} style={drawerStyles}>
+      <ul>
+        <NavItem title='Home' linkTo={'/'} />
+        {projectData.map((project, index) => (
+          <NavItem
+            key={project.title + index}
+            title={project.title}
+            index={index}
+            linkTo={`/projects/${index}`}
+          />
+        ))}
+      </ul>
+    </div>
+  );
 };
 
 export default Drawer;
