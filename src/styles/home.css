@@ -21,10 +21,33 @@
 
 .home-title {
   display: block;
+  animation: fadeInFromLeft 1s ease-in-out;
 }
 
 .home-title-mobile {
   display: none;
+}
+
+@keyframes fadeInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  70% {
+    transform: translateX(50px);
+    transform: scale(1.3);
+  }
+
+  85% {
+    transform: scale(0.95);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    transform: translateX(0);
+  }
 }
 
 .home-title-name {
@@ -52,13 +75,6 @@
   -webkit-text-fill-color: transparent;
   margin: 0;
 }
-
-.home-title-subtitle {
-  font-size: 3rem;
-  font-weight: 700;
-  color: rgba(255, 255, 255, 0.9);
-}
-
 @keyframes gradient {
   0% {
     background-position: 51% 0%;
@@ -69,6 +85,12 @@
   100% {
     background-position: 51% 0%;
   }
+}
+
+.home-title-subtitle {
+  font-size: 3rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .home-button-container {

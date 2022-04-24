@@ -36,7 +36,7 @@ const Home = (props) => {
             </div>
           </div>
           <h2 className='home-title-subtitle'>
-            /* A developer and designer. */
+            &#47;* A developer and designer. *&#47;
           </h2>
           <div className='home-button-container'>
             <HashLink
