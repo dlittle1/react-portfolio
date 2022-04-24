@@ -21,15 +21,19 @@ const Home = (props) => {
           <div className='home-title'>
             <h1>
               <span>&#123;</span>"Hello World. I'm{' '}
-              <span className='home-title-name'>Dylan Little</span>."
+              <div className='home-title-name'>
+                <h1>Dylan Little</h1>
+              </div>
+              ."
               <span>&#125;</span>
             </h1>
           </div>
           <div className='home-title-mobile'>
             <h1 className='home-title-hello'>Hello World. I'm</h1>
-            <h1>
-              <span className='home-title-name'>Dylan Little</span>
-            </h1>
+
+            <div className='home-title-name'>
+              <h1>Dylan Little</h1>
+            </div>
           </div>
           <h2>A developer and designer.</h2>
           <div className='home-button-container'>
@@ -41,7 +45,7 @@ const Home = (props) => {
             >
               View Projects
             </HashLink>
-
+            <DevIcons />
             <div className='home-button-links'>
               {socialLinks.map((button, index) => (
                 <a
@@ -70,7 +74,6 @@ const Home = (props) => {
               ))}
             </div>
           </div>
-          <DevIcons />
         </div>
       </div>
     </div>

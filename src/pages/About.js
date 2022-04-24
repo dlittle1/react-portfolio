@@ -10,7 +10,9 @@ const About = (props) => {
           <div className='about-description'>
             <h2>
               Something about{' '}
-              <span className='home-title-name'>Dylan Little</span>
+              <div className='home-title-name'>
+                <h2>Dylan Little</h2>
+              </div>
             </h2>
             <p>
               It all started when I was a college student studying
@@ -21,6 +23,7 @@ const About = (props) => {
               we are interested in. After writing just a few lines of code I was
               hooked!
             </p>
+            <br />
             <p>
               Then came code academy, and youtube videos, and constant stack
               overflow, but by the end of the semester I had a fully functioning
@@ -29,19 +32,22 @@ const About = (props) => {
               create posts, like posts, etc. I was blown away by what I could do
               with just a little bit of code.
             </p>
+            <br />
             <p>
               Coding is who I am at my core, I love solving puzzles, I love
               design, and I love creating things for other people to enjoy.
             </p>
+            <br />
 
-            <p>
+            {/* <p>
               Full stack for me is where it's at, I can get into the meat of the
               app by designing the who, what, and how of backend design, then I
               get to move into the creative design aspects of frontend
               development. Seeing a page flourish from backend to frontend, and
               eventually become a published application that other users can
-              access, excites me to no end.
-            </p>
+              access is such an exciting process.
+            </p> <br />*/}
+
             <p>
               Right now I'm in find all, eat all mode. I can research and play
               with development technologies for hours and hours. I've recently
@@ -50,6 +56,7 @@ const About = (props) => {
               Ruby on Rails, Bootstrap, C#, and Java, although It's been quite
               some time.
             </p>
+            <br />
             <p>
               Born and raised in Utah, so I guess I'm your typical Utahn when I
               say that I LOVE the outdoors, I love to ski, hike, bike, climb,
