@@ -2,12 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import '../styles/navbar.css';
 import NavItem from './NavItem';
-import {
-  faGithub,
-  faLinkedin,
-  faStackOverflow,
-} from '@fortawesome/free-brands-svg-icons';
-import { faFileAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ReactTooltip from 'react-tooltip';
 import socialNavLinks from '../data/socialLinks';
