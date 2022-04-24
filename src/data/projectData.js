@@ -10,7 +10,7 @@ const projectData = [
   {
     title: 'Sneaker Heads',
     description:
-      "Sneaker Heads is an online social media platform for those that love shoes. It's a place where people can go to share pics of their favorite shoes. They can like other shoes, comment on other shoes, they can create update and delete their own shoes. All of these are stored using MongoDB, the server is run on Node.JS and Express.",
+      "Sneaker Heads is an online social media platform for those that love shoes. It's a place where people can go to share pics of their favorite shoes.<br/><br /> They can like other shoes, comment on other shoes, they can create update and delete their own shoes. All of these are stored using MongoDB, the server is run on Node.JS and Express.",
     importantPoints: [
       'Created an API specifically for the shoes.',
       'Used Mongoose to create a schema for the shoes.',
@@ -33,7 +33,7 @@ const projectData = [
   {
     title: 'Rock the Vote',
     description:
-      "Rock the Vote is a web application that allows you to post about different political views and vote on the most popular one. It's a great way to get involved in politics and to show your support for your local candidates. This application was developed on the MERN stack. I was responsible for the front-end and back-end development. It is mobile responsive and has a clean and simple design. The database is hosted on MongoDB Atlas, while the server is hosted on Heroku.",
+      "Rock the Vote is a web application that allows you to post about different political views and vote on the most popular one. It's a great way to get involved in politics and to show your support for your local candidates.<br /><br /> This application was developed on the MERN stack. I was responsible for the front-end and back-end development. It is mobile responsive and has a clean and simple design. The database is hosted on MongoDB Atlas, while the server is hosted on Heroku.",
     importantPoints: [
       'Used context to store user state, as well as access API calls.',
       'The user is able to like posts that interest them.',
@@ -53,7 +53,7 @@ const projectData = [
   {
     title: 'Rick and Morty Universe',
     description:
-      "Rick and Morty themed site thats pulls data from two api's, rickandmortyapi.com and mediawiki.org/wiki/API. The data that is pulled gives information about characters locations and episodes and how they are related, for example: what characters are from what locations and are in what episodes. mediawiki allows me to access the wikipedia on rick and morty and that is where I pulled descriptions for each character.",
+      "Rick and Morty themed site thats pulls data from two api's, rickandmortyapi.com and mediawiki.org/wiki/API. The data that is pulled gives information about characters locations and episodes and how they are related<br/><br/> For example: what characters are from what locations, and what episodes do they occur in? mediawiki allows me to access the wikipedia page about Rick and Morty, that is where I pulled descriptions for each character.",
     importantPoints: [
       'Used axios to make Api Calls.',
       'Implemented Infinite Scroll functionality into character list, and location list.',

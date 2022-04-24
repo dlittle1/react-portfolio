@@ -57,6 +57,18 @@
   border-radius: 0.5rem;
 }
 
+.project-description p {
+  margin-top: 10px;
+}
+
+.project-key-points {
+  padding-left: 15px;
+}
+
+.project-key-points li {
+  margin-top: 10px;
+}
+
 .project-images {
   max-width: 50%;
 }

@@ -77,15 +77,20 @@ const Project = () => {
         <div className='project-container'>
           <div className='project-description'>
             <h2>Description</h2>
-            <p>{description}</p> <br />
+            <div
+              dangerouslySetInnerHTML={{ __html: `<p>${description}</p>` }}
+            ></div>{' '}
+            <br />
             <h2>Key Points</h2>
-            {importantPoints.map((point, index) => {
-              return (
-                <div key={index}>
-                  <p> - {point}</p>
-                </div>
-              );
-            })}
+            <div className='project-key-points'>
+              {importantPoints.map((point, index) => {
+                return (
+                  <ul key={index}>
+                    <li>{point}</li>
+                  </ul>
+                );
+              })}
+            </div>
           </div>
           <ImgsViewer
             imgs={imgs}
