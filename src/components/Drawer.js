@@ -8,6 +8,7 @@ const Drawer = ({ drawerIsOpen, handleDrawer, drawerButtonRef }) => {
 
   useEffect(() => {
     function handleClickOutside(event) {
+      if (!drawerIsOpen) return;
       if (
         drawerRef.current &&
         !drawerRef.current.contains(event.target) &&
