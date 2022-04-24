@@ -3,18 +3,32 @@ import './component-styles/drawer.css';
 import NavItem from './NavItem';
 import projectData from '../data/projectData';
 
-const Drawer = ({ drawerIsOpen, handleDrawer }) => {
+const Drawer = ({ drawerIsOpen, handleDrawer, drawerButtonRef }) => {
   const drawerRef = useRef(null);
 
-  useEffect(() => {
-    function handleClickOutside(event) {
-      if (drawerRef.current && !drawerRef.current.contains(event.target)) {
-        handleDrawer();
-      }
+  function handleClickOutside(event) {
+    if (drawerRef.current.contains(event.target)) {
+    } else {
+      console.log(handleDrawer);
+      handleDrawer();
     }
+
+    if (
+      drawerRef.current &&
+      !drawerRef.current.contains(event.target) &&
+      drawerButtonRef.current &&
+      !drawerButtonRef.current.contains(event.target)
+    ) {
+      handleDrawer();
+    }
+  }
+
+  useEffect(() => {
     document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('touchstart', handleClickOutside);
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('touchstart', handleClickOutside);
     };
   }, []);
 

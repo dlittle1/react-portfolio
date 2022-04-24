@@ -12,6 +12,7 @@
   align-items: center;
   justify-content: flex-start;
   transition: all 0.3s ease-in-out;
+  border-top-right-radius: 0.5rem;
 }
 
 .drawer .projects-nav-item {

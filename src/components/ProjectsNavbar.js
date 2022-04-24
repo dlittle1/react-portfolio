@@ -4,7 +4,7 @@ import projectsData from '../data/projectData';
 import './component-styles/projectsNavbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-const ProjectsNavbar = ({ handleDrawer }) => {
+const ProjectsNavbar = ({ handleDrawer, drawerButtonRef }) => {
   return (
     <nav className='projects-nav'>
       <ul className='projects-nav-items'>
@@ -19,7 +19,11 @@ const ProjectsNavbar = ({ handleDrawer }) => {
         ))}
       </ul>
       <ul className='projects-nav-drawer'>
-        <li className='projects-nav-drawer-button' onClick={handleDrawer}>
+        <li
+          className='projects-nav-drawer-button'
+          ref={drawerButtonRef}
+          onClick={handleDrawer}
+        >
           <FontAwesomeIcon icon={faBars} size='xl' />
         </li>
       </ul>
