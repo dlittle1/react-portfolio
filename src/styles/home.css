@@ -22,7 +22,7 @@
 .home-title {
   display: block;
   position: relative;
-  animation: fadeInFromLeft 1s ease-in-out;
+  animation: fadeInFromLeftAndSmash 1s ease-in-out;
 }
 
 .home-title::after {
@@ -39,7 +39,7 @@
   display: none;
 }
 
-@keyframes fadeInFromLeft {
+@keyframes fadeInFromLeftAndSmash {
   0% {
     opacity: 0;
     transform: translateX(-100%);
