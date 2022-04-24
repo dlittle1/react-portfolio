@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useParams } from 'react-router-dom';
 import projectData from '../data/projectData';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -9,18 +9,26 @@ import Drawer from '../components/Drawer';
 
 const Project = () => {
   const params = useParams();
+  const drawerButtonRef = useRef(null);
   const [drawerIsOpen, setDrawerIsOpen] = useState(false);
   const { title, description, importantPoints, imgs, github, website } =
     projectData[params.projectId];
 
   const handleDrawer = () => {
-    setDrawerIsOpen(!drawerIsOpen);
+    setDrawerIsOpen((prevState) => !prevState);
   };
 
   return (
     <>
-      <ProjectsNavbar handleDrawer={handleDrawer} />
-      <Drawer drawerIsOpen={drawerIsOpen} handleDrawer={handleDrawer} />
+      <ProjectsNavbar
+        handleDrawer={handleDrawer}
+        drawerButtonRef={drawerButtonRef}
+      />
+      <Drawer
+        drawerIsOpen={drawerIsOpen}
+        handleDrawer={handleDrawer}
+        drawerButtonRef={drawerButtonRef}
+      />
       <div className='project'>
         <div>
           <h1>{title}</h1>
