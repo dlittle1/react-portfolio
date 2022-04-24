@@ -5,7 +5,8 @@
 .projects-heading p {
   font-size: 1.5rem;
   font-weight: 700;
-  margin: 10px;
+  line-height: 1.5;
+  margin: 20px;
   text-align: center;
   color: white;
 }
