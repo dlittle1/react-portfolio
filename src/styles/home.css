@@ -26,7 +26,6 @@
 
 .home-title-mobile {
   display: none;
-  animation: fadeInFromLeft 1s ease-in-out;
 }
 
 @keyframes fadeInFromLeft {
