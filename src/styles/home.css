@@ -37,7 +37,7 @@
 
 .home-title-name h1,
 .home-title-name h2 {
-  animation: gradient 5s ease infinite;
+  animation: gradient 7s ease infinite;
   background: no-repeat
     linear-gradient(to bottom right, #bd5a80, #bd5a80, #7a4d7b, #bd5a80);
   background-size: 200% 200%;
