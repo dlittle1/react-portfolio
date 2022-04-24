@@ -41,7 +41,7 @@ const Projects = (props) => {
                 <h5>{project.title}</h5>
               </div>
               <img
-                src={project.imgs[0]}
+                src={project.imgs[0].src}
                 style={{ maxWidth: '100%', float: 'right' }}
                 alt={project.title}
               />
