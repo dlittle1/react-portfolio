@@ -8,12 +8,17 @@ const DevIcons = () => {
     <div className='home-icons'>
       {devIconsData.map((icon, index) => (
         <div key={icon.name + index} className='home-icon-container'>
-          <FontAwesomeIcon
-            icon={icon.icon}
-            data-tip
-            data-for={icon.tooltip}
-            size='3x'
-          />
+          {icon.name === 'Redux' ? (
+            <i className={icon.icon} data-tip data-for={icon.tooltip} />
+          ) : (
+            <FontAwesomeIcon
+              icon={icon.icon}
+              data-tip
+              data-for={icon.tooltip}
+              size='3x'
+            />
+          )}
+
           <ReactTooltip
             id={icon.tooltip}
             place='top'

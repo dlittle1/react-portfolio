@@ -28,6 +28,11 @@ const devIcons = [
     tooltip: 'React',
   },
   {
+    name: 'Redux',
+    icon: 'fak fa-redux fa-3x',
+    tooltip: 'Redux',
+  },
+  {
     name: 'Node',
     icon: faNode,
     tooltip: 'Node.js',
@@ -36,11 +41,6 @@ const devIcons = [
     name: 'Git',
     icon: faGit,
     tooltip: 'Git',
-  },
-  {
-    name: 'Java',
-    icon: faJava,
-    tooltip: 'Java',
   },
 ];
 
