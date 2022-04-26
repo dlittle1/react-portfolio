@@ -36,7 +36,7 @@ const Home = (props) => {
             </div>
           </div>
           <div className='home-title-subtitle'>
-            <h2>&#47;* A full stack developer. *&#47;</h2>
+            <h2>&#47;&#47; A full stack developer.</h2>
           </div>
 
           <div className='home-button-container'>
