@@ -13,12 +13,9 @@ const DevIcons = () => {
               <i className='fak fa-redux fa-3x' />
             </div>
           ) : (
-            <FontAwesomeIcon
-              icon={icon.icon}
-              data-tip
-              data-for={icon.tooltip}
-              size='3x'
-            />
+            <div className='home-icon' data-tip data-for={icon.tooltip}>
+              <FontAwesomeIcon icon={icon.icon} size='3x' />
+            </div>
           )}
 
           <ReactTooltip
