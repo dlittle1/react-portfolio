@@ -5,6 +5,7 @@ import { faJava } from '@fortawesome/free-brands-svg-icons';
 import { faReact } from '@fortawesome/free-brands-svg-icons';
 import { faJsSquare } from '@fortawesome/free-brands-svg-icons';
 import { faHtml5 } from '@fortawesome/free-brands-svg-icons';
+import ReduxIcon from '../assets/SVG/redux.svg';
 
 const devIcons = [
   {
@@ -29,7 +30,7 @@ const devIcons = [
   },
   {
     name: 'Redux',
-    icon: 'fak fa-redux fa-3x',
+    icon: ReduxIcon,
     tooltip: 'Redux',
   },
   {

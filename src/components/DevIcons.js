@@ -9,7 +9,9 @@ const DevIcons = () => {
       {devIconsData.map((icon, index) => (
         <div key={icon.name + index} className='home-icon-container'>
           {icon.name === 'Redux' ? (
-            <i className={icon.icon} data-tip data-for={icon.tooltip} />
+            <div className='home-icon-redux' data-tip data-for={icon.tooltip}>
+              <i className='fak fa-redux fa-3x' />
+            </div>
           ) : (
             <FontAwesomeIcon
               icon={icon.icon}
