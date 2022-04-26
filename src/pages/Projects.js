@@ -10,7 +10,7 @@ const Projects = (props) => {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 1000);
+    }, 300);
   }, []);
 
   const breakpoints = {
