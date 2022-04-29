@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/home.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import ReactTooltip from 'react-tooltip';
 import { HashLink } from 'react-router-hash-link';
 import socialLinks from '../data/socialLinks';
@@ -40,14 +41,16 @@ const Home = (props) => {
           </div>
 
           <div className='home-button-container'>
-            <HashLink
-              smooth
-              to={`/#projects`}
-              scroll={(el) => scrollWithOffset(el)}
-              className='home-button'
-            >
-              View Projects
-            </HashLink>
+            <div className='home-buttons'>
+              <HashLink
+                smooth
+                to={`/#projects`}
+                scroll={(el) => scrollWithOffset(el)}
+                className='home-button'
+              >
+                View Projects
+              </HashLink>
+            </div>
             <DevIcons />
             <div className='home-button-links'>
               {socialLinks.map((button, index) => (

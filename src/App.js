@@ -7,6 +7,7 @@ import Project from './pages/Project';
 import Resume from './pages/Resume';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './styles/mobile.css';
+import Footer from './pages/Footer';
 function App() {
   const homeRef = useRef(null);
   const projectsRef = useRef(null);
@@ -30,6 +31,7 @@ function App() {
                 <Home refProp={homeRef} projectsRef={projectsRef} />
                 <Projects refProp={projectsRef} />
                 <About refProp={aboutRef} />
+                <Footer />
               </>
             }
           />

@@ -21,12 +21,11 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 50px;
+  gap: 40px;
   width: 100%;
 }
 
 .nav-links-social {
   justify-content: center;
   align-items: center;
-  gap: 40px;
 }

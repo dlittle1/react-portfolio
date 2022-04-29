@@ -154,6 +154,15 @@
   width: 100%;
 }
 
+.home-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+}
+
 .home-button {
   background-color: transparent;
   border: 1px solid white;
