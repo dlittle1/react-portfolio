@@ -21,7 +21,7 @@
 .home-title {
   display: block;
   position: relative;
-  margin-top: 170px;
+  margin-top: 120px;
   animation: fadeInFromLeftAndSmash 1s ease-in-out;
 }
 
