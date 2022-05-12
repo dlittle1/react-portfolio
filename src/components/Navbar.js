@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import '../styles/navbar.css';
 import NavItem from './NavItem';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import ReactTooltip from 'react-tooltip';
 import socialNavLinks from '../data/socialLinks';
 const Navbar = (props) => {
   const [value, setValue] = useState('1');
@@ -47,14 +46,6 @@ const Navbar = (props) => {
                     icon={link.icon}
                     size='2x'
                   />
-                  <ReactTooltip
-                    id={link.tooltip}
-                    place='bottom'
-                    type='dark'
-                    effect='solid'
-                  >
-                    {link.tooltip}
-                  </ReactTooltip>
                 </a>
               </li>
             ))}
