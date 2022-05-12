@@ -73,32 +73,12 @@
 
 .home-title-name h1,
 .home-title-name h2 {
-  animation: gradient 7s ease infinite;
-  background: no-repeat
-    linear-gradient(
-      to bottom right,
-      #bd5a80,
-      #7a4d7b,
-      #bd5a80,
-      #bd5a80,
-      #7a4d7b,
-      #bd5a80
-    );
-  background-size: 200% 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: rgb(179, 88, 127);
   margin: 0;
 }
-@keyframes gradient {
-  0% {
-    background-position: 51% 0%;
-  }
-  50% {
-    background-position: 50% 100%;
-  }
-  100% {
-    background-position: 51% 0%;
-  }
+
+.home-title-name h2 {
+  font-size: 2rem;
 }
 
 .home-title-subtitle h2 {
