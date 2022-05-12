@@ -10,7 +10,7 @@ const About = (props) => {
           <div className='about-description'>
             <h2>
               Something about{' '}
-              <div className='home-title-name'>
+              <div className='home-title-name' style={{ padding: '0 7px' }}>
                 <h2>Dylan Little</h2>
               </div>
             </h2>
