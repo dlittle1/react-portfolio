@@ -34,6 +34,11 @@
     margin-top: 60px;
   }
 
+  .home-title-subtitle h2 {
+    animation: typing 3.5s steps(40, end) 0s, opacity 0s,
+      blink 0.75s step-end infinite;
+  }
+
   .home-title-mobile h1 {
     font-size: 3.5rem;
     margin: 20px 0px;
