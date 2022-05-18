@@ -102,6 +102,7 @@
 
   .about-description {
     width: 97%;
+    border: none;
   }
 
   .about-description .home-title-name {
